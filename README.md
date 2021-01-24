@@ -9,4 +9,4 @@ Frontend - [@Kapatid](https://github.com/Kapatid/php-proj)
 
 ### Build
 
-Simple site not including any backend.
+Simple site not including any backend. Animation engine used: [Anime.js](https://github.com/juliangarnier/anime/).
