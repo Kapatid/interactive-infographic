@@ -171,6 +171,57 @@ header nav #menu-burger .line {
   margin-left: -60px;
 }
 
+.folder .folder-container-tabs {
+  width: 80%;
+  overflow: auto;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(60px, 130px));
+  grid-auto-flow: column;
+}
+
+.folder .folder-container-tabs .folder-tab {
+  cursor: pointer;
+  background-color: #253680;
+  color: #f5f5f5;
+  padding: 8px 6px 8px 6px;
+  transition: all 0.5s ease;
+  display: grid;
+  place-items: center;
+}
+
+.folder .folder-container-tabs .folder-tab .folder-tab-name {
+  display: grid;
+  pointer-events: none;
+}
+
+.folder .folder-container-tabs .folder-tab:hover {
+  background-color: #f9d552;
+  color: #253680;
+}
+
+.folder .folder-container-tabs .folder-tab:first-of-type {
+  background-color: #f5f5f5;
+  color: #253680;
+}
+
+.folder .folder-content {
+  width: 80%;
+  height: 400px;
+  background-color: #f5f5f5;
+}
+
+.folder .folder-content .folder-content-body {
+  width: 100%;
+  height: 100%;
+  display: none;
+  place-items: center;
+}
+
+.folder .folder-content .folder-content-body:first-of-type {
+  display: grid;
+}
+
 #container-countries {
   position: absolute;
   top: 0;
@@ -222,7 +273,8 @@ header nav #menu-burger .line {
   width: 80%;
 }
 
-#container-countries .container-country .content .content-food {
+#container-countries .container-country .content .content-food,
+#container-countries .container-country .content .content-famous-bldgs {
   width: 80%;
   display: none;
   align-items: center;
@@ -230,7 +282,8 @@ header nav #menu-burger .line {
   grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
 }
 
-#container-countries .container-country .content .content-food div {
+#container-countries .container-country .content .content-food div,
+#container-countries .container-country .content .content-famous-bldgs div {
   overflow: hidden;
   width: 150px;
   height: 150px;
@@ -238,7 +291,8 @@ header nav #menu-burger .line {
   cursor: pointer;
 }
 
-#container-countries .container-country .content .content-food div .food-name {
+#container-countries .container-country .content .content-food div .food-name,
+#container-countries .container-country .content .content-famous-bldgs div .food-name {
   visibility: hidden;
   position: absolute;
   display: grid;
@@ -247,22 +301,24 @@ header nav #menu-burger .line {
   color: #f5f5f5;
 }
 
-#container-countries .container-country .content .content-food div:hover > .food-name {
+#container-countries .container-country .content .content-food div:hover > .food-name,
+#container-countries .container-country .content .content-famous-bldgs div:hover > .food-name {
   visibility: visible;
   z-index: 1;
 }
 
-#container-countries .container-country .content .content-food div:hover > img {
+#container-countries .container-country .content .content-food div:hover > img,
+#container-countries .container-country .content .content-famous-bldgs div:hover > img {
   transform: scale(1.4);
 }
 
-#container-countries .container-country .content .content-food div img {
+#container-countries .container-country .content .content-food div img,
+#container-countries .container-country .content .content-famous-bldgs div img {
   transition: all 0.5s ease;
   width: 100%;
 }
 
 #container-countries .container-country .content .content-religion,
-#container-countries .container-country .content .content-famous-bldgs,
 #container-countries .container-country .content .content-arts,
 #container-countries .container-country .content .content-holidays,
 #container-countries .container-country .content .content-festivals,
@@ -271,7 +327,7 @@ header nav #menu-burger .line {
 #container-countries .container-country .content .content-language,
 #container-countries .container-country .content .content-infrastructure {
   width: 80%;
-  display: grid;
+  display: none;
   place-items: center;
 }
 
@@ -314,6 +370,10 @@ header nav #menu-burger .line {
 .country-navbar .navbar-btn:last-of-type {
   background-color: #253680;
   border: 1.5px solid #f9d552;
+}
+
+.country-navbar .navbar-btn img {
+  pointer-events: none;
 }
 
 body {

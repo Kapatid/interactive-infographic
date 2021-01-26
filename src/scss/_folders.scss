@@ -1,0 +1,55 @@
+.folder {
+  .folder-container-tabs {
+    width: 80%;
+    overflow: auto;
+
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 130px));
+    grid-auto-flow: column;
+
+    .folder-tab {
+      cursor: pointer;
+      background-color: $blue;
+      color: $white;
+      padding: 8px 6px 8px 6px;
+      transition: all 0.5s ease;
+
+      display: grid;
+      place-items: center;
+
+      .folder-tab-name {
+        display: grid;
+        pointer-events: none;
+      }
+
+      &:hover {
+        background-color: $yellow;
+        color: $blue;
+      }
+
+      &:first-of-type {
+        background-color: $white;
+        color: $blue;
+      }
+    }
+  }
+
+  .folder-content {
+    width: 80%;
+    height: 400px;
+    background-color: $white;
+
+    .folder-content-body {
+      width: 100%;
+      height: 100%;
+
+      display: none;
+      place-items: center;
+
+      &:first-of-type {
+        display: grid;
+      }
+    }
+  }
+}

@@ -54,7 +54,8 @@
         }
       }
 
-      .content-food {
+      .content-food,
+      .content-famous-bldgs {
         width: 80%;
 
         display: none;
@@ -95,7 +96,6 @@
       }
 
       .content-religion,
-      .content-famous-bldgs,
       .content-arts,
       .content-holidays,
       .content-festivals,
@@ -105,7 +105,7 @@
       .content-infrastructure {
         width: 80%;
 
-        display: grid;
+        display: none;
         place-items: center;
       }
     }
@@ -124,6 +124,7 @@
 
   .navbar-btn {
     cursor: pointer;
+
     width: 70px;
     height: 70px;
     border: 1.5px solid $blue;
@@ -152,6 +153,10 @@
     &:last-of-type {
       background-color: $blue;
       border: 1.5px solid $yellow;
+    }
+
+    img {
+      pointer-events: none;
     }
   }
 }

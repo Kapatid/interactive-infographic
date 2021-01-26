@@ -9,7 +9,11 @@ var white = "#F5F5F5";
 var countryBallsAnimated = false;
 var mapTitleAnimated = false;
 
-var currentCountryInfoPage;
+var previousCountryInfoPage = document.getElementsByClassName(
+  "btn-overview"
+)[0]; //Change when new container-country opens
+
+var previousFolderTab = document.getElementsByClassName("folder-tab")[0];
 
 /* ----------- HOME PAGE EVENTS / ANIMATIONS ----------- */
 document
@@ -40,6 +44,7 @@ document
 //     document.querySelector("#group3").offsetHeight
 // );
 
+/* ----------- HIDE BEFORE ANIMATING ----------- */
 anime({
   targets: ".country-balls1 img",
   opacity: 0,
@@ -57,6 +62,7 @@ anime({
   opacity: 0,
 });
 
+/* ----------- START ANIMATIONS ON SCROLL ----------- */
 document
   .getElementsByClassName("parallax")[0]
   .addEventListener("scroll", function () {
@@ -121,23 +127,38 @@ document.querySelectorAll(".btn-back-map").forEach((item) => {
   });
 });
 
-document.querySelectorAll(".btn-overview").forEach((item) => {
-  item.addEventListener("click", (btn) => {
-    var elem = btn.target.parentElement.parentElement.previousElementSibling;
+addEventToBtn(".btn-overview", 0);
+addEventToBtn(".btn-food", 1);
+addEventToBtn(".btn-religion", 2);
+addEventToBtn(".btn-famous-bldgs", 3);
+addEventToBtn(".btn-arts", 4);
+addEventToBtn(".btn-holidays", 5);
+addEventToBtn(".btn-festivals", 6);
+addEventToBtn(".btn-superstition", 7);
+addEventToBtn(".btn-commute", 8);
+addEventToBtn(".btn-language", 9);
+addEventToBtn(".btn-infrastructure", 10);
 
-    setContent(elem, 0);
+function addEventToBtn(elName, elNum) {
+  document.querySelectorAll(elName).forEach((item) => {
+    item.addEventListener("click", (btn) => {
+      getContents(btn.target, elNum);
+      buttonStyle(btn.target);
+    });
   });
-});
+}
 
-document.querySelectorAll(".btn-food").forEach((item) => {
-  item.addEventListener("click", (btn) => {
-    var elem = btn.target.parentElement.parentElement.previousElementSibling;
+function buttonStyle(btn) {
+  btn.style.cssText = "background-color: #f5f5f5; border: 1.5px solid #f5f5f5;";
 
-    setContent(elem, 1);
-  });
-});
+  if (btn != previousCountryInfoPage) {
+    previousCountryInfoPage.style.cssText =
+      "border: 1.5px solid #253680; background-color: #f9d552;";
+    previousCountryInfoPage = btn;
+  }
+}
 
-function setContent(el, showContent) {
+function getContents(el, showContent) {
   let contentDivs = [
     "content-overview",
     "content-food",
@@ -152,14 +173,40 @@ function setContent(el, showContent) {
     "content-infrastructure",
   ];
 
-  contentDivs.forEach((item) => {
-    let foundElem = el.getElementsByClassName(item)[0];
+  var foundElem = el.parentElement.previousElementSibling;
 
-    foundElem.style.display = "none";
+  contentDivs.forEach((item) => {
+    foundElem.getElementsByClassName(item)[0].style.display = "none";
   });
 
-  el.getElementsByClassName(contentDivs[showContent])[0].style.display = "grid";
+  foundElem.getElementsByClassName(contentDivs[showContent])[0].style.display =
+    "grid";
 }
+
+/**
+ * FOLDER JS
+ *
+ * Author: Nadji Tan
+ *
+ */
+document.getElementsByClassName("folder").forEach((item) => {
+  item.getElementsByClassName("folder-tab").forEach((tab, index) => {
+    tab.addEventListener("click", (btn) => {
+      previousFolderTab.style.cssText =
+        "background-color: #253680; color: #f5f5f5;";
+      btn.target.style.cssText = "background-color: #f5f5f5; color: #253680;";
+
+      item.getElementsByClassName("folder-content-body").forEach((body) => {
+        body.style.display = "none";
+      });
+
+      item.getElementsByClassName("folder-content-body")[index].style.display =
+        "grid";
+
+      previousFolderTab = btn.target;
+    });
+  });
+});
 
 /* ----------- MAPS ----------- */
 /**
