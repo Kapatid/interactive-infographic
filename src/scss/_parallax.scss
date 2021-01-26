@@ -1,0 +1,93 @@
+/* Parallax base styles
+  --------------------------------------------- */
+
+.parallax {
+  height: 100vh;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-perspective: 100vw;
+  perspective: 100vw;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px; /* fallback for older browsers */
+  height: 100vh;
+  width: 100%;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--fore {
+  -webkit-transform: translateZ(90px) scale(0.7);
+  transform: translateZ(90px) scale(0.7);
+  z-index: 1;
+}
+
+.parallax__layer--base {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallax__layer--back {
+  /* ----------- Non-Retina Screens (Desktop/Laptop) ----------- */
+  @media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+    -webkit-transform: translateZ(-1000px) scale(1.7);
+    transform: translateZ(-1000px) scale(1.7);
+  }
+
+  /* ----------- iPad 1, 2, Mini and Air ----------- */
+  /* Portrait and Landscape */
+  @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+    -webkit-transform: translateZ(-1000px) scale(100%);
+    transform: translateZ(-1000px) scale(100%);
+  }
+
+  z-index: 3;
+}
+
+.parallax__layer--deep {
+  -webkit-transform: translateZ(-600px) scale(3);
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+#group1 {
+  z-index: 1; /* slide over group 2 */
+
+  #bg1 {
+    background-image: url(../../dist/img/bg.png);
+    //background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+#group2 {
+  z-index: 3; /* slide under groups 1 and 3 */
+  overflow: hidden;
+  #bg2 {
+    background-color: $blue;
+    background-image: url(../../dist/img/bgmap.png);
+    //background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+#group3 {
+  z-index: 4; /* slide over group 2 and 4 */
+}

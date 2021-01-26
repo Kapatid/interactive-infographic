@@ -4,10 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 header {
   width: 100%;
   height: 10vh;
   background-color: black;
+  font-family: "Roboto", sans-serif;
 }
 
 header nav {
@@ -37,14 +42,389 @@ header nav #menu-burger .line {
   transition: all 0.6s ease-in-out;
 }
 
-#main-body {
-  height: 100%;
+/* Parallax base styles
+  --------------------------------------------- */
+.parallax {
+  height: 100vh;
   width: 100%;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 100vw;
+}
+
+.parallax__group {
+  position: relative;
+  height: 500px;
+  /* fallback for older browsers */
+  height: 100vh;
+  width: 100%;
+  transform-style: preserve-3d;
+}
+
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.parallax__layer--fore {
+  transform: translateZ(90px) scale(0.7);
+  z-index: 1;
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+  z-index: 4;
+}
+
+.parallax__layer--back {
+  /* ----------- Non-Retina Screens (Desktop/Laptop) ----------- */
+  /* ----------- iPad 1, 2, Mini and Air ----------- */
+  /* Portrait and Landscape */
+  z-index: 3;
+}
+
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 1) {
+  .parallax__layer--back {
+    transform: translateZ(-1000px) scale(1.7);
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .parallax__layer--back {
+    transform: translateZ(-1000px) scale(100%);
+  }
+}
+
+.parallax__layer--deep {
+  transform: translateZ(-600px) scale(3);
+  z-index: 2;
+}
+
+#group1 {
+  z-index: 1;
+  /* slide over group 2 */
+}
+
+#group1 #bg1 {
+  background-image: url(../../dist/img/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#group2 {
+  z-index: 3;
+  /* slide under groups 1 and 3 */
+  overflow: hidden;
+}
+
+#group2 #bg2 {
+  background-color: #253680;
+  background-image: url(../../dist/img/bgmap.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#group3 {
+  z-index: 4;
+  /* slide over group 2 and 4 */
+}
+
+#map {
+  width: 100%;
+  height: 100vh;
+  background-color: #f9d552;
   display: grid;
   place-items: center;
 }
 
-#chartdiv {
+#map h1 {
+  font-weight: 300;
+  font-size: 3rem;
+  color: #253680;
+}
+
+#map #chartdiv {
+  width: 85%;
+  height: 75vh;
+}
+
+.tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.534);
+  color: #fff;
+  text-align: center;
+  border-radius: 15px;
+  padding: 7px 10px 7px 10px;
+  font-size: 0.8rem;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 110%;
+  left: 50%;
+  margin-left: -60px;
+}
+
+#container-countries {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  font-family: "Roboto", sans-serif;
+  color: #253680;
+  z-index: 10;
   width: 100%;
-  height: 600px;
+  height: 100vh;
+  background-color: #f9d552;
+  display: grid;
+  place-items: center;
+}
+
+#container-countries .container-country {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+#container-countries .container-country .content {
+  width: 100%;
+  margin-bottom: 120px;
+  display: grid;
+  place-items: center;
+}
+
+#container-countries .container-country .content .content-overview {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+#container-countries .container-country .content .content-overview .country-info h1 {
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+#container-countries .container-country .content .content-overview .country-info p {
+  font-weight: 300;
+}
+
+#container-countries .container-country .content .content-overview img {
+  width: 80%;
+}
+
+#container-countries .container-country .content .content-food {
+  width: 80%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
+}
+
+#container-countries .container-country .content .content-food div {
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  position: relative;
+  cursor: pointer;
+}
+
+#container-countries .container-country .content .content-food div .food-name {
+  visibility: hidden;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.521);
+  color: #f5f5f5;
+}
+
+#container-countries .container-country .content .content-food div:hover > .food-name {
+  visibility: visible;
+  z-index: 1;
+}
+
+#container-countries .container-country .content .content-food div:hover > img {
+  transform: scale(1.4);
+}
+
+#container-countries .container-country .content .content-food div img {
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+#container-countries .container-country .content .content-religion,
+#container-countries .container-country .content .content-famous-bldgs,
+#container-countries .container-country .content .content-arts,
+#container-countries .container-country .content .content-holidays,
+#container-countries .container-country .content .content-festivals,
+#container-countries .container-country .content .content-superstition,
+#container-countries .container-country .content .content-commute,
+#container-countries .container-country .content .content-language,
+#container-countries .container-country .content .content-infrastructure {
+  width: 80%;
+  display: grid;
+  place-items: center;
+}
+
+.country-navbar {
+  position: absolute;
+  top: 82%;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 80px));
+}
+
+.country-navbar .navbar-btn {
+  cursor: pointer;
+  width: 70px;
+  height: 70px;
+  border: 1.5px solid #253680;
+  border-radius: 50%;
+  background-color: #f9d552;
+  display: grid;
+  place-items: center;
+  transition: all 0.5s ease;
+}
+
+.country-navbar .navbar-btn:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.22);
+}
+
+.country-navbar .navbar-btn:hover > .tooltip-text {
+  visibility: visible;
+}
+
+.country-navbar .navbar-btn:first-of-type {
+  background-color: #f5f5f5;
+  border: 1.5px solid #f5f5f5;
+}
+
+.country-navbar .navbar-btn:last-of-type {
+  background-color: #253680;
+  border: 1.5px solid #f9d552;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+#title-page {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr 5%;
+}
+
+#title-page .title-page-content {
+  display: grid;
+  place-items: center;
+  color: #ef5142;
+  margin-bottom: 400px;
+}
+
+#title-page .title-page-content a #asean-logo {
+  width: 110px;
+}
+
+#title-page .title-page-content h1 {
+  font-weight: 400;
+  font-size: 4rem;
+}
+
+#title-page .title-page-content p {
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+#title-page .title-page-button {
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+}
+
+#title-page .title-page-button img {
+  width: 35px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#title-page .title-page-button img:hover {
+  transition: all 0.25s ease-in-out;
+  transform: scale(1.3);
+  opacity: 1;
+}
+
+#title-description {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  grid-template-rows: 1fr 5%;
+}
+
+#title-description .title-description-content {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 22% 1fr 22%;
+}
+
+#title-description .title-description-content .country-balls1 {
+  display: grid;
+  place-items: center;
+  row-gap: 20px;
+}
+
+#title-description .title-description-content .country-balls1 img {
+  width: 80px;
+}
+
+#title-description .title-description-content .country-text {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 200;
+  color: #f5f5f5;
+  line-height: 1.6;
+  display: grid;
+  place-items: center;
+}
+
+#title-description .title-description-content .country-balls2 {
+  display: grid;
+  place-items: center;
+  row-gap: 20px;
+}
+
+#title-description .title-description-content .country-balls2 img {
+  width: 80px;
+}
+
+#title-description .title-description-button {
+  display: grid;
+  place-items: center;
+  margin-bottom: 15px;
+}
+
+#title-description .title-description-button img {
+  width: 35px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+#title-description .title-description-button img:hover {
+  transition: all 0.25s ease-in-out;
+  transform: scale(1.3);
+  opacity: 1;
 }

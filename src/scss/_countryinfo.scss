@@ -1,0 +1,157 @@
+#container-countries {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+
+  font-family: "Roboto", sans-serif;
+  color: $blue;
+
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  background-color: $yellow;
+
+  display: grid;
+  place-items: center;
+
+  .container-country {
+    width: 100%;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+
+    .content {
+      width: 100%;
+      margin-bottom: 120px;
+
+      display: grid;
+      place-items: center;
+
+      .content-overview {
+        width: 80%;
+
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        .country-info {
+          h1 {
+            margin-bottom: 20px;
+            font-weight: 300;
+            font-size: 3rem;
+          }
+
+          p {
+            font-weight: 300;
+          }
+        }
+
+        img {
+          width: 80%;
+        }
+      }
+
+      .content-food {
+        width: 80%;
+
+        display: none;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
+
+        div {
+          overflow: hidden;
+          width: 150px;
+          height: 150px;
+          position: relative;
+          cursor: pointer;
+
+          .food-name {
+            visibility: hidden;
+            position: absolute;
+            display: grid;
+            place-items: center;
+            background-color: rgba(0, 0, 0, 0.521);
+            color: $white;
+          }
+
+          &:hover > .food-name {
+            visibility: visible;
+            z-index: 1;
+          }
+
+          &:hover > img {
+            transform: scale(1.4);
+          }
+
+          img {
+            transition: all 0.5s ease;
+            width: 100%;
+          }
+        }
+      }
+
+      .content-religion,
+      .content-famous-bldgs,
+      .content-arts,
+      .content-holidays,
+      .content-festivals,
+      .content-superstition,
+      .content-commute,
+      .content-language,
+      .content-infrastructure {
+        width: 80%;
+
+        display: grid;
+        place-items: center;
+      }
+    }
+  }
+}
+
+.country-navbar {
+  position: absolute;
+  top: 82%;
+  width: 100%;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(20px, 80px));
+
+  .navbar-btn {
+    cursor: pointer;
+    width: 70px;
+    height: 70px;
+    border: 1.5px solid $blue;
+    border-radius: 50%;
+    background-color: $yellow;
+
+    display: grid;
+    place-items: center;
+
+    transition: all 0.5s ease;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0px 18px rgba(0, 0, 0, 0.22);
+
+      & > .tooltip-text {
+        visibility: visible;
+      }
+    }
+
+    &:first-of-type {
+      background-color: $white;
+      border: 1.5px solid $white;
+    }
+
+    &:last-of-type {
+      background-color: $blue;
+      border: 1.5px solid $yellow;
+    }
+  }
+}

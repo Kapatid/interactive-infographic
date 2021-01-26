@@ -5,10 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Infographic</title>
 
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./dist/css/app.css" />
   </head>
   <body>
-    <header>
+    <!-- <header>
       <nav>
         <div id="logo">LOGO</div>
 
@@ -18,10 +23,290 @@
           <div class="line"></div>
         </label>
       </nav>
-    </header>
+    </header> -->
 
-    <section id="main-body">
-      <div id="chartdiv"></div>
+    <!-- <section id="main-body"> -->
+    <div class="parallax">
+      <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div id="title-page">
+            <div class="title-page-content">
+              <a href="#second-section"
+                ><img
+                  id="asean-logo"
+                  src="./dist/img/aseanlogo.png"
+                  alt="ASEAN-LOGO.png"
+              /></a>
+
+              <h1>THE ASEAN</h1>
+
+              <p>"One Vision, One Identity, One Community."</p>
+            </div>
+
+            <div class="title-page-button">
+              <img
+                id="arrow-down"
+                src="./dist/img/chevron-down.svg"
+                alt=""
+                class="home-btn-1"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="parallax__layer parallax__layer--back" id="bg1"></div>
+      </div>
+
+      <div id="group2" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div id="title-description">
+            <div class="title-description-content">
+              <div class="country-balls1">
+                <img
+                  id="brunei"
+                  src="./dist/img/country-circles/brunei.png"
+                  alt="brunei.png"
+                />
+                <img
+                  id="cambodia"
+                  src="./dist/img/country-circles/cambodia.png"
+                  alt="cambodia.png"
+                />
+                <img
+                  id="indonesia"
+                  src="./dist/img/country-circles/indonesia.png"
+                  alt="indonesia.png"
+                />
+                <img
+                  id="laos"
+                  src="./dist/img/country-circles/laos.png"
+                  alt="laos.png"
+                />
+                <img
+                  id="malaysia"
+                  src="./dist/img/country-circles/malaysia.png"
+                  alt="malaysia.png"
+                />
+              </div>
+
+              <div class="country-text">
+                The Association of Southeast Asian Nations is a regional
+                intergovernmental organization comprising ten countries in
+                Southeast Asia, which promotes intergovernmental cooperation and
+                facilitates economic, political, security, military,
+                educational, and sociocultural integration among its members and
+                other countries in Asia.
+              </div>
+
+              <div class="country-balls2">
+                <img
+                  id="myanmar"
+                  src="./dist/img/country-circles/myanmar.png"
+                  alt="myanmar.png"
+                />
+                <img
+                  id="philippines"
+                  src="./dist/img/country-circles/philippines.png"
+                  alt="philippines.png"
+                />
+                <img
+                  id="singapore"
+                  src="./dist/img/country-circles/singapore.png"
+                  alt="singapore.png"
+                />
+                <img
+                  id="thailand"
+                  src="./dist/img/country-circles/thailand.png"
+                  alt="thailand.png"
+                />
+                <img
+                  id="vietnam"
+                  src="./dist/img/country-circles/vietnam.png"
+                  alt="vietnam.png"
+                />
+              </div>
+            </div>
+
+            <div class="title-description-button">
+              <img
+                src="./dist/img/chevron-down.svg"
+                alt=""
+                class="home-btn-2"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="parallax__layer parallax__layer--back" id="bg2"></div>
+      </div>
+
+      <div id="group3" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+          <div id="map">
+            <h1 id="map-title">GET TO KNOW OUR CULTURE.</h1>
+            <div id="chartdiv"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- </section> -->
+
+    <section id="container-countries">
+      <div class="container-country container-brunei">
+        <div class="content">
+          <div class="content-overview">
+            <div class="country-info">
+              <h1>BRUNEI</h1>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+            </div>
+            <img src="./dist/img/countries/bruneiDarussalamHigh.svg" alt="" />
+          </div>
+
+          <div class="content-food">
+            <div>
+              <div class="food-name">Food 1</div>
+              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+            </div>
+            <div>
+              <div class="food-name">Food 2</div>
+              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+            </div>
+            <div>
+              <div class="food-name">Food 3</div>
+              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+            </div>
+            <div>
+              <div class="food-name">Food 4</div>
+              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+            </div>
+          </div>
+
+          <div class="content-religion"></div>
+
+          <div class="content-famous-bldgs"></div>
+
+          <div class="content-arts"></div>
+
+          <div class="content-holidays"></div>
+
+          <div class="content-festivals"></div>
+
+          <div class="content-superstition"></div>
+
+          <div class="content-commute"></div>
+
+          <div class="content-language"></div>
+
+          <div class="content-infrastructure"></div>
+        </div>
+
+        <div class="country-navbar">
+          <div class="navbar-btn btn-overview">
+            <img
+              src="./dist/img/navbar-icons/Icon material-fullscreen.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Country Overview</span>
+          </div>
+          <div class="navbar-btn btn-food">
+            <img
+              src="./dist/img/navbar-icons/Icon map-food.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Foods</span>
+          </div>
+          <div class="navbar-btn btn-religion">
+            <img
+              src="./dist/img/navbar-icons/Religion_icon.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Religion</span>
+          </div>
+          <div class="navbar-btn btn-famous-bldgs">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-landmark.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Famous Buildings</span>
+          </div>
+          <div class="navbar-btn btn-arts">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-paint-brush.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Arts</span>
+          </div>
+          <div class="navbar-btn btn-holidays">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-calendar-alt.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Holidays</span>
+          </div>
+          <div class="navbar-btn btn-festivals">
+            <img
+              src="./dist/img/navbar-icons/Group 30.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Festivals</span>
+          </div>
+          <div class="navbar-btn btn-superstition">
+            <img
+              src="./dist/img/navbar-icons/noun_Fingers Crossed_8534.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Superstitions</span>
+          </div>
+          <div class="navbar-btn btn-commute">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-car-alt.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Commute</span>
+          </div>
+          <div class="navbar-btn btn-language">
+            <img
+              src="./dist/img/navbar-icons/Icon material-language.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Language</span>
+          </div>
+          <div class="navbar-btn btn-infrastructure">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-road.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Infrastructure</span>
+          </div>
+          <div class="navbar-btn btn-back-map">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-map-marked.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Back To ASEAN Map</span>
+          </div>
+        </div>
+      </div>
     </section>
 
     <script src="./vendor/anime-master/lib/anime.min.js"></script>

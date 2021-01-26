@@ -2,43 +2,166 @@ const Logo = document.querySelector("#logo");
 const MenuBurger = document.querySelector("#menu-burger");
 const MainBody = document.querySelector("#main-body");
 
-var tl = anime.timeline({
-  easing: "easeOutCubic",
-  duration: 500,
-});
+var blue = "#253680";
+var yellow = "#F9D552";
+var white = "#F5F5F5";
 
-// tl.add({
-//   targets: "#logo",
-//   translateX: 250,
-//   opacity: [0, 1],
-//   direction: "reverse",
-// }).add(
-//   {
-//     targets: "#menu-burger",
-//     translateX: 250,
-//     opacity: [0, 1],
-//     direction: "reverse",
-//   },
-//   "-=250"
+var countryBallsAnimated = false;
+var mapTitleAnimated = false;
+
+var currentCountryInfoPage;
+
+/* ----------- HOME PAGE EVENTS / ANIMATIONS ----------- */
+document
+  .getElementsByClassName("home-btn-1")[0]
+  .addEventListener("click", function (event) {
+    document.querySelector("#group2").scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+document
+  .getElementsByClassName("home-btn-2")[0]
+  .addEventListener("click", function (event) {
+    document.querySelector("#group3").scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+
+// console.log("Group 2 TOP: " + document.querySelector("#group2").offsetTop);
+// console.log(
+//   "Group 2 BOTTOM: " +
+//     document.querySelector("#group2").offsetTop +
+//     document.querySelector("#group2").offsetHeight
+// );
+// console.log("Group 3 TOP: " + document.querySelector("#group3").offsetTop);
+// console.log(
+//   "Group 3 BOTTOM: " +
+//     document.querySelector("#group3").offsetTop +
+//     document.querySelector("#group3").offsetHeight
 // );
 
 anime({
-  targets: "#logo",
-  translateX: 50,
+  targets: ".country-balls1 img",
   opacity: 0,
-  direction: "reverse",
-  easing: "linear",
-  duration: 400,
 });
 anime({
-  targets: "#menu-burger",
-  translateX: 50,
+  targets: ".country-text",
   opacity: 0,
-  direction: "reverse",
-  easing: "linear",
-  duration: 400,
+});
+anime({
+  targets: ".country-balls2 img",
+  opacity: 0,
+});
+anime({
+  targets: "#map-title",
+  opacity: 0,
 });
 
+document
+  .getElementsByClassName("parallax")[0]
+  .addEventListener("scroll", function () {
+    let currentScroll = document.getElementsByClassName("parallax")[0]
+      .scrollTop;
+
+    if (currentScroll >= 794 && countryBallsAnimated == false) {
+      anime({
+        targets: ".country-balls1 img",
+        opacity: [0, 1],
+        translateX: [-100, 0],
+        delay: anime.stagger(150),
+      });
+
+      anime({
+        targets: ".country-text",
+        opacity: [0, 1],
+        translateY: [50, 0],
+        easing: "spring(1, 80, 10, 0)",
+      });
+
+      anime({
+        targets: ".country-balls2 img",
+        opacity: [0, 1],
+        translateX: [100, 0],
+        delay: anime.stagger(150),
+      });
+
+      countryBallsAnimated = true;
+    }
+
+    if (currentScroll >= 1588 && mapTitleAnimated == false) {
+      anime({
+        targets: "#map h1",
+        opacity: [0, 1],
+        translateY: [-100, 0],
+        delay: anime.stagger(50),
+      });
+
+      mapTitleAnimated = true;
+    }
+
+    // console.log(document.getElementsByClassName("parallax")[0].scrollTop); // KNOW THE CURRENT SCROLL
+  });
+
+/* ----------- COUNTRY PAGE EVENTS / ANIMATIONS ----------- */
+document.querySelectorAll(".btn-back-map").forEach((item) => {
+  item.addEventListener("click", (event) => {
+    anime({
+      targets: "#container-countries",
+      translateX: [0, "100%"],
+      easing: "cubicBezier(.5, .05, .5, .5)",
+      duration: 600,
+      complete: function (anim) {
+        document.getElementById("container-countries").style.visibility =
+          "hidden";
+        document.querySelector("#group3").scrollIntoView({
+          behavior: "smooth",
+        });
+      },
+    });
+  });
+});
+
+document.querySelectorAll(".btn-overview").forEach((item) => {
+  item.addEventListener("click", (btn) => {
+    var elem = btn.target.parentElement.parentElement.previousElementSibling;
+
+    setContent(elem, 0);
+  });
+});
+
+document.querySelectorAll(".btn-food").forEach((item) => {
+  item.addEventListener("click", (btn) => {
+    var elem = btn.target.parentElement.parentElement.previousElementSibling;
+
+    setContent(elem, 1);
+  });
+});
+
+function setContent(el, showContent) {
+  let contentDivs = [
+    "content-overview",
+    "content-food",
+    "content-religion",
+    "content-famous-bldgs",
+    "content-arts",
+    "content-holidays",
+    "content-festivals",
+    "content-superstition",
+    "content-commute",
+    "content-language",
+    "content-infrastructure",
+  ];
+
+  contentDivs.forEach((item) => {
+    let foundElem = el.getElementsByClassName(item)[0];
+
+    foundElem.style.display = "none";
+  });
+
+  el.getElementsByClassName(contentDivs[showContent])[0].style.display = "grid";
+}
+
+/* ----------- MAPS ----------- */
 /**
  * AMCHARTS
  * Link: https://www.amcharts.com/
@@ -52,7 +175,7 @@ am4core.ready(function () {
 
   // Set map definition
   chart.geodata = am4geodata_worldLow;
-  chart.background.fill = am4core.color("#aadaff");
+  chart.background.fill = am4core.color(yellow);
   chart.background.fillOpacity = 1;
 
   // Set projection
@@ -60,7 +183,7 @@ am4core.ready(function () {
 
   // Center on the groups by default
   chart.homeZoomLevel = 0;
-  chart.homeGeoPoint = { longitude: 117, latitude: 10 };
+  chart.homeGeoPoint = { longitude: 117, latitude: 9.2 };
 
   // Create map polygon series
   var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -70,20 +193,21 @@ am4core.ready(function () {
 
   // Configure series
   var polygonTemplate = polygonSeries.mapPolygons.template;
-  polygonTemplate.tooltipHTML = "{name} <br> <button>Hello</button>";
-  polygonTemplate.fill = am4core.color("#74B266");
+  polygonTemplate.tooltipHTML =
+    '<div style="text-align:center; color:#253680;"> <h3 style="font-weight:400; text-transform: uppercase;"> {name} </h3> <p style="font-style:italic; font-size:0.8rem;"> {subtext} </p> </div>';
+  polygonTemplate.stroke = am4core.color(yellow);
 
   // Create hover state and set alternative fill color
   var country = polygonTemplate.states.create("hover");
-  country.properties.fill = am4core.color("#367B25");
+  country.properties.fill = am4core.color(white);
 
   var btnContainer = chart.createChild(am4core.Container);
   btnContainer.shouldClone = false;
   btnContainer.align = "right";
   btnContainer.valign = "top";
   //btnContainer.zIndex = Number.MAX_SAFE_INTEGER;
-  btnContainer.marginTop = 5;
-  btnContainer.marginRight = 5;
+  btnContainer.marginTop = 10;
+  btnContainer.marginRight = 20;
 
   //var homeButton = btnContainer.createChild(am4core.Button);
   var homeButton = new am4core.Button();
@@ -94,24 +218,25 @@ am4core.ready(function () {
   homeButton.icon = new am4core.Sprite();
   homeButton.padding(7, 5, 7, 5);
   homeButton.width = 30;
-  homeButton.scale = 2;
+  homeButton.scale = 1.5;
   homeButton.cursorOverStyle = am4core.MouseCursorStyle.pointer;
   homeButton.icon.path =
     "M16,8 L14,8 L14,16 L10,16 L10,10 L6,10 L6,16 L2,16 L2,8 L0,8 L8,0 L16,8 Z M16,8";
-  homeButton.fill = "#367B25";
-  homeButton.realFill = "#367B25";
+  homeButton.fill = blue;
   homeButton.parent = chart;
   homeButton.align = "right";
   homeButton.valign = "bottom";
-  homeButton.marginBottom = 5;
-  homeButton.marginRight = 10;
+  homeButton.marginBottom = 20;
+  homeButton.marginRight = 25;
   //homeButton.insertBefore(chart.zoomControl.plusButton);
 
   // Zoom control
   chart.zoomControl = new am4maps.ZoomControl();
   chart.zoomControl.parent = btnContainer;
   chart.zoomControl.scale = 1.2;
+  chart.zoomControl.stroke = blue;
   chart.zoomControl.slider.height = 70;
+  chart.zoomControl.slider.stroke = white;
   chart.zoomControl.cursorOverStyle = am4core.MouseCursorStyle.pointer;
 
   var excludedCountries = ["AQ"];
@@ -120,53 +245,63 @@ am4core.ready(function () {
   polygonSeries.data = [
     {
       title: "Brunei", // Custom data. Different from name
-      fill: "#5C5CFF",
+      subtext: "A Kingdom of Unexpected Treasures",
+      fill: blue,
       id: "BN", // With polygonSeries.useGeodata = true, it will try and match this id, then apply the other properties as custom data
       //customData: "1995",
     },
     {
       title: "Cambodia",
-      fill: "#5C5CFF",
+      subtext: "Kingdom of Wonder",
+      fill: blue,
       id: "KH",
     },
     {
       title: "Indonesia",
-      fill: "#5C5CFF",
+      subtext: "Wonderful Indonesia",
+      fill: blue,
       id: "ID",
     },
     {
       title: "Lao",
-      fill: "#5C5CFF",
+      subtext: "Simply Beautiful",
+      fill: blue,
       id: "LA",
     },
     {
       title: "Malaysia",
-      fill: "#5C5CFF",
+      subtext: "Truly Asia",
+      fill: blue,
       id: "MY",
     },
     {
       title: "Myanmar",
-      fill: "#5C5CFF",
+      subtext: "Be Enchanted",
+      fill: blue,
       id: "MM",
     },
     {
       title: "Philippines",
-      fill: "#ff5a5f",
+      subtext: "It's More Fun in the Philippines",
+      fill: blue,
       id: "PH",
     },
     {
       title: "Singapore",
-      fill: "#5C5CFF",
+      subtext: "Passion Made Possible",
+      fill: blue,
       id: "SG",
     },
     {
       title: "Thailand",
-      fill: "#5C5CFF",
+      subtext: "Amazing Thailand",
+      fill: blue,
       id: "TH",
     },
     {
-      title: "Viet Nam",
-      fill: "#5C5CFF",
+      title: "Vietnam",
+      subtext: "Timeless Charm",
+      fill: blue,
       id: "VN",
     },
   ];
