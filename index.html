@@ -10,6 +10,14 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/css/splide.min.css"
+      integrity="sha256-EqzwzekQXKNbB5EE4nNBQT+2gWQIWRZQXAd89YdIq8M="
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="./dist/css/app.css" />
   </head>
   <body>
@@ -151,98 +159,1017 @@
     </div>
     <!-- </section> -->
 
+    <div id="modal-country">
+      <img id="country-modal-close" src="./dist/img/close.svg" alt="" />
+      <img
+        id="modal-country-img"
+        src="./dist/img/country-circles/brunei.png"
+        alt=""
+      />
+      <h1 id="modal-country-name">Placeholder</h1>
+      <button id="btn-go-country">View</button>
+    </div>
+
+    <!--Info Pages of Countries -->
     <section id="container-countries">
-      <div class="container-country container-brunei">
+      <div class="container-brunei">
         <div class="content">
           <div class="content-overview">
             <div class="country-info">
               <h1>BRUNEI</h1>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
+              <p>A Kingdom of Unexpected Treasures</p>
             </div>
-            <img src="./dist/img/countries/bruneiDarussalamHigh.svg" alt="" />
+            <div id="chartdivBrunei" class="country-img"></div>
           </div>
 
           <div class="content-food">
-            <div>
-              <div class="food-name">Food 1</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
-            </div>
-            <div>
-              <div class="food-name">Food 2</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
-            </div>
-            <div>
-              <div class="food-name">Food 3</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
-            </div>
-            <div>
-              <div class="food-name">Food 4</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+            <div class="foods">
+              <div class="container-food">
+                <div class="food-name">Aice Kacang</div>
+                <img src="./dist/img/foods/brunei/Aice Kacang.jfif" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Ambuyat</div>
+                <img src="./dist/img/foods/brunei/Ambuyat.jpg" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Daging Masak Lada Hitam</div>
+                <img
+                  src="./dist/img/foods/brunei/Daging Masak Lada Hitam.jfif"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Kelupi</div>
+                <img src="./dist/img/foods/brunei/Kelupi.jfif" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Serondeng Pandag</div>
+                <img
+                  src="./dist/img/foods/brunei/Serondeng Pandag.jfif"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Udang Sambal Serai Bersantan</div>
+                <img
+                  src="./dist/img/foods/brunei/Udang Sambal Serai Bersantan.jfif"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
 
-          <div class="content-religion">RELIGION</div>
+          <div class="content-religion">
+            <canvas
+              id="doughnut-chart-religion-brunei"
+              width="700"
+              height="500"
+            ></canvas>
+          </div>
 
           <div class="content-famous-bldgs">
-            <div>
-              <div class="food-name">Building 1</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
-            </div>
-            <div>
-              <div class="food-name">Building 2</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
-            </div>
-            <div>
-              <div class="food-name">Building 3</div>
-              <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+            <div class="buildings">
+              <div class="container-building">
+                <div class="building-name">Istana Nurul Iman</div>
+                <img
+                  src="./dist/img/famous-buildings/brunei/Istana Nurul Iman.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">
+                  Jame’asr Hassanil Bolkiah Mosque
+                </div>
+                <img
+                  src="./dist/img/famous-buildings/brunei/Jame’asr Hassanil Bolkiah Mosque.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">
+                  Lapau (The Royal Ceremonial Hall)
+                </div>
+                <img
+                  src="./dist/img/famous-buildings/brunei/Lapau (The Royal Ceremonial Hall).jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Royal Regalia Museum</div>
+                <img
+                  src="./dist/img/famous-buildings/brunei/Royal Regalia Museum.jfif"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">
+                  Sultan Omar Ali Saifuddin Mosque
+                </div>
+                <img
+                  src="./dist/img/famous-buildings/brunei/Sultan Omar Ali Saifuddin Mosque.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Universiti Teknologi Brunei</div>
+                <img
+                  src="./dist/img/famous-buildings/brunei/Universiti Teknologi Brunei.jpg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
 
           <div class="content-arts folder">
             <div class="folder-container-tabs">
               <div class="folder-tab">
-                <div class="folder-tab-name">First</div>
+                <div class="folder-tab-name">Visual and Performing Arts</div>
               </div>
 
               <div class="folder-tab">
-                <div class="folder-tab-name">Second</div>
+                <div class="folder-tab-name">Architecture</div>
               </div>
 
               <div class="folder-tab">
-                <div class="folder-tab-name">Third</div>
+                <div class="folder-tab-name">Traditional Arts</div>
               </div>
             </div>
 
             <div class="folder-content">
-              <div class="folder-content-body">First Contents</div>
-              <div class="folder-content-body">Second Contents</div>
-              <div class="folder-content-body">Third Contents</div>
+              <div class="folder-content-body">
+                Brass and silver metalworks are significant to the Bruneian
+                culture as they constitute as ritual paraphernalia and heirloom
+                property of the origin of the Bruneians.
+              </div>
+              <div class="folder-content-body">
+                The opulence of the Mosques is influenced by Islamic arts, which
+                is heavily tied to their faith and religion. It signifies
+                respect to their gods and the integrity of their nation - which
+                is the main reason why there are many culturally-significant
+                architecturally-marvelous buildings in the country.
+              </div>
+              <div class="folder-content-body">
+                Traditional arts in Brunei includes boat making,
+                silver-smithing, bronze tooling, cloth weaving, and basket
+                weaving.
+              </div>
             </div>
           </div>
 
-          <div class="content-holidays">HOLIDAYS</div>
+          <div class="content-holidays">
+            <div class="splide">
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <img src="./dist/img/chevron-left.svg" alt="" />
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <img src="./dist/img/chevron-right.svg" alt="" />
+                </button>
+              </div>
 
-          <div class="content-festivals">FESTIVALS</div>
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <h1>1<br />JAN</h1>
+                    <p>New Year’s Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>13<br />FEB</h1>
+                    <p>Lunar New Year</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>23<br />FEB</h1>
+                    <p>Brunei National Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>11<br />MAR</h1>
+                    <p>Prophet’s Ascension</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>22<br />MAR</h1>
+                    <p>Israk Mikraj (The Revelation of the Quran)</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>24<br />APR</h1>
+                    <p>First day of Ramadan</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>11<br />MAY</h1>
+                    <p>Nuzul Al-Quran</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>24<br />MAY</h1>
+                    <p>End of Ramadan</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>24 - 27<br />MAY</h1>
+                    <p>Hari Raya Aidil Fitri</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>1<br />JUN</h1>
+                    <p>Royal Brunei Armed Forces Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>15<br />JUL</h1>
+                    <p>H.M. The Sultan’s Birthday</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>31<br />JUL</h1>
+                    <p>Hari Raya Aidil Adha (Feast of the Sacrifice)</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>20<br />AUG</h1>
+                    <p>Al-Hijra (Hijri New Year)</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>29<br />OCT</h1>
+                    <p>Prophet Muhammad’s Birthday</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>25<br />DEC</h1>
+                    <p>Christmas Day (Hari Natal)</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-          <div class="content-superstition">SUPERSTITIONS</div>
+          <div class="content-festivals">
+            <div class="splide primary-slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <span>Harvest Festival Ceremony</span>
+                    <img
+                      src="./dist/img/festivals/brunei/Harvest Festival Ceremony.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>National Day Brunei</span>
+                    <img
+                      src="./dist/img/festivals/brunei/National Day Brunei.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Royal Brunei Armed Forces Day</span>
+                    <img
+                      src="./dist/img/festivals/brunei/Royal Brunei Armed Forces Day 2019.jpg"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
 
-          <div class="content-commute">COMMUTE</div>
+            <div class="splide secondary-slider">
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <img src="./dist/img/chevron-left - white.svg" alt="" />
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <img src="./dist/img/chevron-right - white.svg" alt="" />
+                </button>
+              </div>
 
-          <div class="content-language">LANGUAGE</div>
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/brunei/Harvest Festival Ceremony.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/brunei/National Day Brunei.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/brunei/Royal Brunei Armed Forces Day 2019.jpg"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-          <div class="content-infrastructure">INFRASTRUCTURE</div>
+          <div class="content-superstition">
+            <div class="container-superstitions">
+              <div class="superstition">
+                Hantu (Malay for Ghost) - which covers all types of ghosts,
+                demons, goblins, and undead creatures with real physical bodies
+              </div>
+              <div class="superstition">
+                Penanggalan - A vampire with a disembodied flying head that
+                preys on the newborn. It is also similar to the Philippine
+                folklore, manananggal.
+              </div>
+              <div class="superstition">
+                Hantu puteri - a spirit that will seduce men and lead them deep
+                into a forest
+              </div>
+              <div class="superstition">
+                Hantu punjut - a spirit that will take children who wanders the
+                forest late at night
+              </div>
+              <div class="superstition">
+                Puaka - spirits that resides in abandoned building
+              </div>
+              <div class="superstition">
+                Jembalang tanah - earth demons that act dangerously when an
+                improper ritual occured
+              </div>
+            </div>
+          </div>
+
+          <div class="content-commute folder">
+            <div class="folder-container-tabs">
+              <div class="folder-tab">
+                <div class="folder-tab-name">Car Rentals</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Trains and Buses</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Water Taxis</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Taxis</div>
+              </div>
+            </div>
+
+            <div class="folder-content">
+              <div class="folder-content-body">
+                Rentals are done in the Hertz and Avis at the airport and
+                booking in advance is required.
+              </div>
+              <div class="folder-content-body">
+                Buses are the most popular, usually in a distinct 20-seater
+                purple vans, as trains are exclusive to government, high-ranking
+                officials, and other highly significant individuals only.
+              </div>
+              <div class="folder-content-body">
+                Can be found at the canal market or behind Yayasan Sultan Haji
+                Hassanal Bolkia.
+              </div>
+              <div class="folder-content-body">Contents</div>
+            </div>
+          </div>
+
+          <div class="content-language">
+            <canvas
+              id="doughnut-chart-language-brunei"
+              width="700"
+              height="500"
+            ></canvas>
+
+            <div class="language-breakdown">
+              <div class="lb-content">
+                <div class="row">
+                  <h1>OFFICIAL LANGUAGES</h1>
+                  <div class="cards">
+                    <div class="card">Malay</div>
+                    <div class="card">English</div>
+                    <div class="card">Mandarin</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <h1>UNOFFICIAL LANGUAGES</h1>
+                  <div class="cards">
+                    <div class="card">Southern Varieties of Chinese</div>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+
+          <div class="content-infrastructure">
+            <div class="folder">
+              <div class="folder-container-tabs">
+                <div class="folder-tab">
+                  <div class="folder-tab-name">
+                    ROAD NETWORK AND TRANSPORTATION
+                  </div>
+                </div>
+                <div class="folder-tab">
+                  <div class="folder-tab-name">AIRLINES AND PORTS</div>
+                </div>
+                <div class="folder-tab">
+                  <div class="folder-tab-name">TELECOMMUNICATION</div>
+                </div>
+                <div class="folder-tab">
+                  <div class="folder-tab-name">POWER</div>
+                </div>
+              </div>
+
+              <div class="folder-content">
+                <div class="folder-content-body">
+                  The road network serving the entire country is being expanded
+                  and modernized and totaled 2,525 kilometers (1,569 miles) in
+                  1998. A 1,150-kilometer (715-mile) main highway, of which 399
+                  kilometers (248 miles) are paved, runs the entire length of
+                  the country's coastline. It conveniently links Muara, the port
+                  at the eastern end, to Belait, the oil-production center at
+                  the western end of the state. Per capita car ownership in
+                  Brunei is one of the highest in the world. In 1995 there were
+                  167,786 cars, of which 139,658 were private cars. Since 1996
+                  the Brunei government has attempted to improve public transit
+                  by expanding taxi and bus services in Bandar Seri Begawan and
+                  its vicinity. Bus services to other districts are infrequent
+                  and irregular. Other than a 13-kilometer (8-mile) private
+                  railway line, there are no rail services in Brunei.
+                </div>
+                <div class="folder-content-body">
+                  Brunei has 2 major ports: a large, deepwater harbor at Muara
+                  and a smaller port at Kuala Belait. They offer direct shipping
+                  to Hong Kong, Singapore, and several other Asian destinations.
+                  An expanded international airport is located at Bandar Seri
+                  Begawan. Royal Brunei Airlines (RBA) serves long-distance
+                  destinations in Asia, Australia, the Middle East, and Europe,
+                  as well as several short-haul destinations to East Malaysia
+                  and Indonesia, and Brunei Shell Petroleum (BSP) owns a small
+                  airport in the oil field at Seria.
+                </div>
+                <div class="folder-content-body">
+                  Brunei has one of the best telecommunication systems in
+                  Southeast Asia. The rate of telephone availability is
+                  currently 1 telephone for every 3 persons. There are 2 earth
+                  satellite stations providing direct telephone, telex, and
+                  facsimile links to most parts of the world. There are 2
+                  television broadcast stations and, by 1997, there were 196,009
+                  TV sets. Brunei was connected to the Internet in September
+                  1995 through Brunet. By the end of 1999 there were 15,000
+                  registered Internet users in the country. Keen to develop
+                  e-commerce , the government is investing B$55 million in
+                  installing a countrywide multimedia highway called RAGAM 21 to
+                  serve both the private and public sectors.
+                </div>
+                <div class="folder-content-body">
+                  According to the CIA World Factbook 2000 , 2.56 billion
+                  kilowatt-hours (kWh) of electricity were generated and 2.381
+                  billion kWh consumed in Brunei in 1998. There were no exports
+                  or imports of electricity. All the electricity is produced
+                  from fossil fuels (oil and gas). The country has no nuclear or
+                  hydro-power plants.
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         <div class="country-navbar">
-          <div class="navbar-btn btn-overview">
+          <div class="navbar-btn btn-overview active-btn-navbar">
+            <img
+              src="./dist/img/navbar-icons/Icon material-fullscreen.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Country Overview</span>
+          </div>
+          <div class="navbar-btn btn-food">
+            <img
+              src="./dist/img/navbar-icons/Icon map-food.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Foods</span>
+          </div>
+          <div class="navbar-btn btn-religion">
+            <img
+              src="./dist/img/navbar-icons/Religion_icon.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Religion</span>
+          </div>
+          <div class="navbar-btn btn-famous-bldgs">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-landmark.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Famous Buildings</span>
+          </div>
+          <div class="navbar-btn btn-arts">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-paint-brush.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Arts</span>
+          </div>
+          <div class="navbar-btn btn-holidays">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-calendar-alt.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Holidays</span>
+          </div>
+          <div class="navbar-btn btn-festivals">
+            <img
+              src="./dist/img/navbar-icons/Group 30.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Festivals</span>
+          </div>
+          <div class="navbar-btn btn-superstition">
+            <img
+              src="./dist/img/navbar-icons/noun_Fingers Crossed_8534.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Superstitions</span>
+          </div>
+          <div class="navbar-btn btn-commute">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-car-alt.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Commute</span>
+          </div>
+          <div class="navbar-btn btn-language">
+            <img
+              src="./dist/img/navbar-icons/Icon material-language.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Language</span>
+          </div>
+          <div class="navbar-btn btn-infrastructure">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-road.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Infrastructure</span>
+          </div>
+          <div class="navbar-btn btn-back-map">
+            <img
+              src="./dist/img/navbar-icons/Icon awesome-map-marked.svg"
+              alt=""
+              class="navbar-btn-icon"
+            />
+            <span class="tooltip-text">Back To ASEAN Map</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-cambodia">
+        <div class="content">
+          <div class="content-overview">
+            <div class="country-info">
+              <h1>CAMBODIA</h1>
+              <p>Kingdom of Wonder</p>
+            </div>
+            <div id="chartdivCambodia" class="country-img"></div>
+          </div>
+
+          <div class="content-food">
+            <div class="foods">
+              <div class="container-food">
+                <div class="food-name">Bai Sach Chrouk</div>
+                <img
+                  src="./dist/img/foods/cambodia/Bai Sach Chrouk.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Char Kroeung Sach Ko</div>
+                <img
+                  src="./dist/img/foods/cambodia/Char Kroeung Sach Ko.png"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Fish Amok</div>
+                <img src="./dist/img/foods/cambodia/Fish Amok.jpg" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Nom Banh Chok</div>
+                <img src="./dist/img/foods/cambodia/Nom Banh Chok.jpg" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Samlor Machu Trey</div>
+                <img
+                  src="./dist/img/foods/cambodia/Samlor Machu Trey.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Twa Ko</div>
+                <img src="./dist/img/foods/cambodia/Twa Ko.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <div class="content-religion">
+            <canvas
+              id="doughnut-chart-religion-cambodia"
+              width="700"
+              height="500"
+            ></canvas>
+          </div>
+
+          <div class="content-famous-bldgs">
+            <div class="buildings">
+              <div class="container-building">
+                <div class="building-name">Angkor Wat</div>
+                <img
+                  src="./dist/img/famous-buildings/cambodia/Angkor Wat.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Bokor Hill Station</div>
+                <img
+                  src="./dist/img/famous-buildings/cambodia/Bokor Hill Station.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Preah Vihear</div>
+                <img
+                  src="./dist/img/famous-buildings/cambodia/Preah Vihear.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Sihanoukville</div>
+                <img
+                  src="./dist/img/famous-buildings/cambodia/Sihanoukville.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Silver Pagoda</div>
+                <img
+                  src="./dist/img/famous-buildings/cambodia/Silver Pagoda.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Tonlé Sap</div>
+                <img
+                  src="./dist/img/famous-buildings/cambodia/Tonlé Sap.jpg"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="content-arts folder">
+            <div class="folder-container-tabs">
+              <div class="folder-tab">
+                <div class="folder-tab-name">
+                  Textiles and Silk: Time-Intensive Specialties
+                </div>
+              </div>
+            </div>
+
+            <div class="folder-content">
+              <div class="folder-content-body">
+                For centuries, Cambodian art has been vibrant. Traditional
+                Cambodian art refers to art from the 802-C1431 AD Khmer era,
+                when Hindu, and then Buddhist, scholars and artists constructed
+                and occupied many of the famous Angkor temples. The most
+                magnificent of the many temples is Angkor Wat, which was
+                initially Hindu and then Buddhist. For centuries, weaving has
+                been an important trade in Cambodia and during the Angkor
+                period, textiles were used in trade. <br />
+                <br />
+                In the revival of many ancient arts, such as apsara dance and
+                its accompanying music, the influence of classical Khmer culture
+                is also evident. Arts and crafts were typically produced in
+                pre-colonial Cambodia by rural craftsmen and professional
+                artists, derived from the glorious traditions of Angkor.
+              </div>
+            </div>
+          </div>
+
+          <div class="content-holidays">
+            <div class="splide splide-cambodia">
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <img src="./dist/img/chevron-left.svg" alt="" />
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <img src="./dist/img/chevron-right.svg" alt="" />
+                </button>
+              </div>
+
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <h1>1<br />JAN</h1>
+                    <p>New Year’s Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>7<br />JAN</h1>
+                    <p>Victory over Genocide Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>8<br />MAR</h1>
+                    <p>International Women’s Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>13-16<br />APR</h1>
+                    <p>Khmer New Year</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>1<br />MAY</h1>
+                    <p>International Labor Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>6<br />MAY</h1>
+                    <p>Visak Bochea</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>10<br />MAY</h1>
+                    <p>Royal Plowing Ceremony</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>14<br />MAY</h1>
+                    <p>King Sihamoni’s Birthday</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>18<br />JUN</h1>
+                    <p>Queen Mother’s Birthday</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>16-18<br />SEPT</h1>
+                    <p>Pchum Ben</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>24<br />SEPT</h1>
+                    <p>Constitution Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>15<br />OCT</h1>
+                    <p>Commemoration Day of King’s Father</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>29<br />OCT</h1>
+                    <p>King Sihamoni Coronation Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>30-1<br />OCT-NOV</h1>
+                    <p>Water Festival ( Bon Om Touk )</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>9<br />NOV</h1>
+                    <p>Independence Day</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-festivals">
+            <div class="splide primary-slider primary-cambodia">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <span>Angkor Festival – Celebrating Artists</span>
+                    <img
+                      src="./dist/img/festivals/cambodia/Angkor Festival – Celebrating Artists.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Khmer New Year – End Of Harvest Season</span>
+                    <img
+                      src="./dist/img/festivals/cambodia/Khmer New Year – End Of Harvest Season.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Meak Bochea – Festival Of The Monks</span>
+                    <img
+                      src="./dist/img/festivals/cambodia/Meak Bochea – Festival Of The Monks.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Vesak Bochea – To Celebrate Lord Buddha</span>
+                    <img
+                      src="./dist/img/festivals/cambodia/Vesak Bochea – To Celebrate Lord Buddha.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Water Festival – To Honor Naval Forces</span>
+                    <img
+                      src="./dist/img/festivals/cambodia/Water Festival – To Honor Naval Forces.jpg"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="splide secondary-slider secondary-cambodia">
+              <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev">
+                  <img src="./dist/img/chevron-left - white.svg" alt="" />
+                </button>
+                <button class="splide__arrow splide__arrow--next">
+                  <img src="./dist/img/chevron-right - white.svg" alt="" />
+                </button>
+              </div>
+
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/cambodia/Angkor Festival – Celebrating Artists.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/cambodia/Khmer New Year – End Of Harvest Season.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/cambodia/Meak Bochea – Festival Of The Monks.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/cambodia/Vesak Bochea – To Celebrate Lord Buddha.jpg"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/cambodia/Water Festival – To Honor Naval Forces.jpg"
+                    />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-superstition">
+            <div class="container-superstitions">
+              <div class="superstition">The ancestors really eat</div>
+              <div class="superstition">
+                Some dead people don’t know they are dead
+              </div>
+              <div class="superstition">
+                Don’t eat Trey Domrey (Elephant Fish)
+              </div>
+              <div class="superstition">
+                Bad spirits know persons by their name
+              </div>
+            </div>
+          </div>
+
+          <div class="content-commute folder">
+            <div class="folder-container-tabs">
+              <div class="folder-tab">
+                <div class="folder-tab-name">The Cambodian Tuk Tuk</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">“Moto”</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">The three-wheeled Bajaj cabs</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">TaxiCabs</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">City Buses</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Public Vans</div>
+              </div>
+            </div>
+
+            <div class="folder-content">
+              <div class="folder-content-body">
+                The tuktuk is really a stylized two-wheeled carriage which is
+                drawn by a specially built joint connected to it by a
+                motorcycle. Six normal-sized passengers can sit comfortably, and
+                just four if the passengers have very large-sized bodies.
+              </div>
+              <div class="folder-content-body">
+                The "moto" is actually a motorcycle. The name "moto", given to
+                the low-powered motorcycles used by their enterprising owners to
+                carry paying passengers from one place to another, came about
+                because of the difficulty of the Cambodians to pronounce the
+                sound of the letter "R". To make the matter more manageable in
+                speech they reduced the whole word, "motorcycle", down to its
+                first two syllable.
+              </div>
+              <div class="folder-content-body">
+                From India started to become a popular public transport in the
+                city of Phnom Penh. They operate like the Uber taxi. You can ask
+                for a ride via your smart-phone. They are operated by an
+                internet booking system called “Pass App”.
+              </div>
+              <div class="folder-content-body">
+                There is a the number of cars that have the markings of a taxi
+                that can be seen in Cambodia, particularly in the city streets
+                of Phnom Penh, over the past three years (2015 and 2018). Most
+                taxis still tend to be individually owned per vehicle, but at
+                least one fleet of taxis owned by a commercially organized taxi
+                company has recently been noted.
+              </div>
+              <div class="folder-content-body">
+                The Phnom Penh government began running buses with fixed routes
+                and timetables in the city in 2014. This is Bus Rapid Transit or
+                BRT or "city-bus" by the Phnom Penh government. The buses pick
+                up and unload passengers all over the city at designated
+                bus-stops. The fare all the way is just 1,500 Riel (US$0.37).
+              </div>
+              <div class="folder-content-body">
+                The public utility vans are the usual means of public
+                transportation going to and from the provinces of Cambodia. When
+                a van in Cambodia is mentioned to be a public utility vehicle
+                the immediate visualized image of it is dilapidated, overloaded
+                and bursting with all kinds of cargo.
+              </div>
+            </div>
+          </div>
+
+          <div class="content-language">
+            <canvas
+              id="doughnut-chart-language-cambodia"
+              width="700"
+              height="500"
+            ></canvas>
+
+            <div class="language-breakdown">
+              <div class="lb-content">
+                <div class="row">
+                  <h1>OFFICIAL LANGUAGES</h1>
+                  <div class="cards">
+                    <div class="card">Khmer</div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <h1>OTHER LANGUAGES</h1>
+                  <div class="cards">
+                    <div class="card">English</div>
+                    <div class="card">French</div>
+                    <div class="card">Cham</div>
+                    <div class="card">Vietnamese</div>
+                    <div class="card">...</div>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+            </div>
+          </div>
+
+          <div class="content-infrastructure">
+            <div class="folder">
+              <div class="folder-container-tabs">
+                <div class="folder-tab">
+                  <div class="folder-tab-name">Infrastructure</div>
+                </div>
+              </div>
+
+              <div class="folder-content">
+                <div class="folder-content-body">
+                  As the result of decades of conflict and civil war, Cambodia's
+                  infrastructure is extremely weak. There is a limited train
+                  system which runs to the southern seaport of Kampong Saom and
+                  to the northwest (Poipet) on the Thai border. There are plans
+                  to rehabilitate the railway to Poipet and to build a new
+                  railway linking Phnom Penh and Ho Chi Minh City in Vietnam as
+                  part of the trans-Asia railway. These railways cover a total
+                  of 603 kilometers (375 miles). The country has 35,769
+                  kilometers (22,227 miles) of highways, of which only 11.6
+                  percent are paved. The best road is from the capital to the
+                  seaport of Kampong Saom. <br />
+                  <br />
+                  In Cambodia's agricultural sector traditional forms of power
+                  such as waterwheels are still being used. Much of the
+                  population, especially in rural areas, does not have access to
+                  electricity. In 1999, Cambodia's electricity production was
+                  147 million kilowatt-hours (kWh), of which 40.8 percent were
+                  derived from hydroelectric power; the rest was from fossil
+                  fuels. <br />
+                  <br />
+                  Internet access in Cambodia is extremely expensive relative to
+                  local income levels, which greatly restricts the use of the
+                  Internet by non-wealthy Cambodians. <br />
+                  <br />
+                  With respect to print media, there has been a rapid expansion
+                  in recent years. There are currently 3 English language
+                  papers, a French language paper, 88 Khmer language newspapers,
+                  19 Khmer language magazines, and 6 Khmer language bulletins.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="country-navbar">
+          <div class="navbar-btn btn-overview active-btn-navbar">
             <img
               src="./dist/img/navbar-icons/Icon material-fullscreen.svg"
               alt=""
@@ -342,14 +1269,50 @@
       </div>
     </section>
 
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Carousel -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@splidejs/splide@2.4.21/dist/js/splide.min.js"
+      integrity="sha256-SmCcbf/1ehhlBnw3ZGinNu6fjQV471LDBjc4yMMJhsk="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Animations -->
     <script src="./vendor/anime-master/lib/anime.min.js"></script>
 
     <!-- Map Resources -->
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="./dist/img/countries/bruneiDarussalamHigh.js"></script>
+    <script src="./dist/img/countries/cambodiaLow.js"></script>
+    <script src="./dist/img/countries/indonesiaLow.js"></script>
+    <script src="./dist/img/countries/laosLow.js"></script>
+    <script src="./dist/img/countries/malaysiaLow.js"></script>
+    <script src="./dist/img/countries/myanmarLow.js"></script>
+    <script src="./dist/img/countries/philippinesLow.js"></script>
+    <script src="./dist/img/countries/singaporeLow.js"></script>
+    <script src="./dist/img/countries/thailandLow.js"></script>
+    <script src="./dist/img/countries/vietnamLow.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
 
+    <!-- Charts -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"
+      integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom -->
+    <script src="./dist/js/carousel.js"></script>
+    <script src="./dist/js/maps.js"></script>
+    <script src="./dist/js/charts.js"></script>
     <script src="./dist/js/app.js"></script>
   </body>
 </html>

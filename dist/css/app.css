@@ -154,6 +154,11 @@ header nav #menu-burger .line {
   height: 75vh;
 }
 
+#map #chartdivBrunei {
+  width: 100%;
+  height: 100%;
+}
+
 .tooltip-text {
   visibility: hidden;
   width: 120px;
@@ -176,7 +181,7 @@ header nav #menu-burger .line {
   overflow: auto;
   display: grid;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(60px, 130px));
+  grid-template-columns: repeat(auto-fill, minmax(60px, 150px));
   grid-auto-flow: column;
 }
 
@@ -184,13 +189,16 @@ header nav #menu-burger .line {
   cursor: pointer;
   background-color: #253680;
   color: #f5f5f5;
-  padding: 8px 6px 8px 6px;
+  height: 60px;
+  text-align: center;
   transition: all 0.5s ease;
   display: grid;
   place-items: center;
 }
 
 .folder .folder-container-tabs .folder-tab .folder-tab-name {
+  font-size: 0.8rem;
+  font-weight: 500;
   display: grid;
   pointer-events: none;
 }
@@ -209,11 +217,15 @@ header nav #menu-burger .line {
   width: 80%;
   height: 400px;
   background-color: #f5f5f5;
+  display: grid;
+  place-items: center;
 }
 
 .folder .folder-content .folder-content-body {
-  width: 100%;
-  height: 100%;
+  width: 85%;
+  height: 83%;
+  font-size: 1.1rem;
+  overflow: auto;
   display: none;
   place-items: center;
 }
@@ -226,7 +238,7 @@ header nav #menu-burger .line {
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
+  left: 100%;
   bottom: 0;
   font-family: "Roboto", sans-serif;
   color: #253680;
@@ -238,97 +250,547 @@ header nav #menu-burger .line {
   place-items: center;
 }
 
-#container-countries .container-country {
+#container-countries .container-brunei,
+#container-countries .container-cambodia {
   width: 100%;
   height: 100vh;
-  display: grid;
+  display: none;
   place-items: center;
 }
 
-#container-countries .container-country .content {
+#container-countries .container-brunei .content,
+#container-countries .container-cambodia .content {
   width: 100%;
   margin-bottom: 120px;
   display: grid;
   place-items: center;
 }
 
-#container-countries .container-country .content .content-overview {
+#container-countries .container-brunei .content .content-overview,
+#container-countries .container-cambodia .content .content-overview {
   width: 80%;
+  height: 70vh;
   display: grid;
-  place-items: center;
   grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
 }
 
-#container-countries .container-country .content .content-overview .country-info h1 {
-  margin-bottom: 20px;
+#container-countries .container-brunei .content .content-overview .country-info,
+#container-countries .container-cambodia .content .content-overview .country-info {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  grid-template-rows: repeat(2, 70px);
+}
+
+#container-countries .container-brunei .content .content-overview .country-info h1,
+#container-countries .container-cambodia .content .content-overview .country-info h1 {
   font-weight: 300;
   font-size: 3rem;
 }
 
-#container-countries .container-country .content .content-overview .country-info p {
+#container-countries .container-brunei .content .content-overview .country-info p,
+#container-countries .container-cambodia .content .content-overview .country-info p {
   font-weight: 300;
+  font-style: italic;
 }
 
-#container-countries .container-country .content .content-overview img {
-  width: 80%;
+#container-countries .container-brunei .content .content-overview .country-img,
+#container-countries .container-cambodia .content .content-overview .country-img {
+  width: 100%;
+  height: 100%;
 }
 
-#container-countries .container-country .content .content-food,
-#container-countries .container-country .content .content-famous-bldgs {
-  width: 80%;
+#container-countries .container-brunei .content .content-food,
+#container-countries .container-brunei .content .content-famous-bldgs,
+#container-countries .container-cambodia .content .content-food,
+#container-countries .container-cambodia .content .content-famous-bldgs {
+  width: 100%;
+  height: 100vh;
+  background-color: #253680;
   display: none;
-  align-items: center;
+  place-items: center;
+}
+
+#container-countries .container-brunei .content .content-food .foods,
+#container-countries .container-brunei .content .content-food .buildings,
+#container-countries .container-brunei .content .content-famous-bldgs .foods,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings,
+#container-countries .container-cambodia .content .content-food .foods,
+#container-countries .container-cambodia .content .content-food .buildings,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings {
+  width: 70%;
+  height: 400px;
+  display: grid;
+  margin-bottom: 120px;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 160px));
+  place-items: center;
+  grid-template-rows: repeat(4, 180px);
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 1rem;
 }
 
-#container-countries .container-country .content .content-food div,
-#container-countries .container-country .content .content-famous-bldgs div {
+#container-countries .container-brunei .content .content-food .foods .container-food,
+#container-countries .container-brunei .content .content-food .foods .container-building,
+#container-countries .container-brunei .content .content-food .buildings .container-food,
+#container-countries .container-brunei .content .content-food .buildings .container-building,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building,
+#container-countries .container-cambodia .content .content-food .foods .container-food,
+#container-countries .container-cambodia .content .content-food .foods .container-building,
+#container-countries .container-cambodia .content .content-food .buildings .container-food,
+#container-countries .container-cambodia .content .content-food .buildings .container-building,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building {
   overflow: hidden;
-  width: 150px;
-  height: 150px;
-  position: relative;
+  width: 250px;
+  height: 180px;
   cursor: pointer;
+  border-radius: 20px;
 }
 
-#container-countries .container-country .content .content-food div .food-name,
-#container-countries .container-country .content .content-famous-bldgs div .food-name {
+#container-countries .container-brunei .content .content-food .foods .container-food .food-name,
+#container-countries .container-brunei .content .content-food .foods .container-food .building-name,
+#container-countries .container-brunei .content .content-food .foods .container-building .food-name,
+#container-countries .container-brunei .content .content-food .foods .container-building .building-name,
+#container-countries .container-brunei .content .content-food .buildings .container-food .food-name,
+#container-countries .container-brunei .content .content-food .buildings .container-food .building-name,
+#container-countries .container-brunei .content .content-food .buildings .container-building .food-name,
+#container-countries .container-brunei .content .content-food .buildings .container-building .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building .building-name,
+#container-countries .container-cambodia .content .content-food .foods .container-food .food-name,
+#container-countries .container-cambodia .content .content-food .foods .container-food .building-name,
+#container-countries .container-cambodia .content .content-food .foods .container-building .food-name,
+#container-countries .container-cambodia .content .content-food .foods .container-building .building-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-food .food-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-food .building-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-building .food-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-building .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building .building-name {
+  width: inherit;
+  height: inherit;
+  text-align: center;
   visibility: hidden;
   position: absolute;
   display: grid;
   place-items: center;
   background-color: rgba(0, 0, 0, 0.521);
+  border-radius: 20px;
   color: #f5f5f5;
 }
 
-#container-countries .container-country .content .content-food div:hover > .food-name,
-#container-countries .container-country .content .content-famous-bldgs div:hover > .food-name {
+#container-countries .container-brunei .content .content-food .foods .container-food:hover > .food-name,
+#container-countries .container-brunei .content .content-food .foods .container-food:hover > .building-name,
+#container-countries .container-brunei .content .content-food .foods .container-building:hover > .food-name,
+#container-countries .container-brunei .content .content-food .foods .container-building:hover > .building-name,
+#container-countries .container-brunei .content .content-food .buildings .container-food:hover > .food-name,
+#container-countries .container-brunei .content .content-food .buildings .container-food:hover > .building-name,
+#container-countries .container-brunei .content .content-food .buildings .container-building:hover > .food-name,
+#container-countries .container-brunei .content .content-food .buildings .container-building:hover > .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food:hover > .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food:hover > .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building:hover > .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building:hover > .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food:hover > .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food:hover > .building-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building:hover > .food-name,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building:hover > .building-name,
+#container-countries .container-cambodia .content .content-food .foods .container-food:hover > .food-name,
+#container-countries .container-cambodia .content .content-food .foods .container-food:hover > .building-name,
+#container-countries .container-cambodia .content .content-food .foods .container-building:hover > .food-name,
+#container-countries .container-cambodia .content .content-food .foods .container-building:hover > .building-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-food:hover > .food-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-food:hover > .building-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-building:hover > .food-name,
+#container-countries .container-cambodia .content .content-food .buildings .container-building:hover > .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food:hover > .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food:hover > .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building:hover > .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building:hover > .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food:hover > .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food:hover > .building-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building:hover > .food-name,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building:hover > .building-name {
   visibility: visible;
   z-index: 1;
 }
 
-#container-countries .container-country .content .content-food div:hover > img,
-#container-countries .container-country .content .content-famous-bldgs div:hover > img {
+#container-countries .container-brunei .content .content-food .foods .container-food:hover > img,
+#container-countries .container-brunei .content .content-food .foods .container-building:hover > img,
+#container-countries .container-brunei .content .content-food .buildings .container-food:hover > img,
+#container-countries .container-brunei .content .content-food .buildings .container-building:hover > img,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food:hover > img,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building:hover > img,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food:hover > img,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building:hover > img,
+#container-countries .container-cambodia .content .content-food .foods .container-food:hover > img,
+#container-countries .container-cambodia .content .content-food .foods .container-building:hover > img,
+#container-countries .container-cambodia .content .content-food .buildings .container-food:hover > img,
+#container-countries .container-cambodia .content .content-food .buildings .container-building:hover > img,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food:hover > img,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building:hover > img,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food:hover > img,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building:hover > img {
   transform: scale(1.4);
 }
 
-#container-countries .container-country .content .content-food div img,
-#container-countries .container-country .content .content-famous-bldgs div img {
+#container-countries .container-brunei .content .content-food .foods .container-food img,
+#container-countries .container-brunei .content .content-food .foods .container-building img,
+#container-countries .container-brunei .content .content-food .buildings .container-food img,
+#container-countries .container-brunei .content .content-food .buildings .container-building img,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-food img,
+#container-countries .container-brunei .content .content-famous-bldgs .foods .container-building img,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-food img,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings .container-building img,
+#container-countries .container-cambodia .content .content-food .foods .container-food img,
+#container-countries .container-cambodia .content .content-food .foods .container-building img,
+#container-countries .container-cambodia .content .content-food .buildings .container-food img,
+#container-countries .container-cambodia .content .content-food .buildings .container-building img,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-food img,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods .container-building img,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-food img,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings .container-building img {
   transition: all 0.5s ease;
   width: 100%;
+  min-height: 180px;
 }
 
-#container-countries .container-country .content .content-religion,
-#container-countries .container-country .content .content-arts,
-#container-countries .container-country .content .content-holidays,
-#container-countries .container-country .content .content-festivals,
-#container-countries .container-country .content .content-superstition,
-#container-countries .container-country .content .content-commute,
-#container-countries .container-country .content .content-language,
-#container-countries .container-country .content .content-infrastructure {
+#container-countries .container-brunei .content .content-religion,
+#container-countries .container-brunei .content .content-arts,
+#container-countries .container-brunei .content .content-commute,
+#container-countries .container-brunei .content .content-infrastructure,
+#container-countries .container-cambodia .content .content-religion,
+#container-countries .container-cambodia .content .content-arts,
+#container-countries .container-cambodia .content .content-commute,
+#container-countries .container-cambodia .content .content-infrastructure {
   width: 80%;
   display: none;
   place-items: center;
+}
+
+#container-countries .container-brunei .content .content-holidays,
+#container-countries .container-cambodia .content .content-holidays {
+  width: 100vw;
+  height: 100vh;
+  background-color: #253680;
+  overflow: hidden;
+  display: none;
+  place-items: center;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide,
+#container-countries .container-cambodia .content .content-holidays .splide {
+  width: 100vw;
+  margin-bottom: 120px;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__track,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__track {
+  padding: 40px 0px 40px 0px;
+  overflow: visible;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__track .splide__list,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__track .splide__list {
+  height: 270px;
+  display: flex;
+  align-items: flex-end;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__track .splide__list .splide__slide,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__track .splide__list .splide__slide {
+  transition: all 0.5s ease;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.055);
+  color: #f5f5f598;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__track .splide__list .splide__slide.isActive,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__track .splide__list .splide__slide.isActive {
+  background-color: #f9d552;
+  color: #253680;
+  transform: scale(1.4);
+  margin-bottom: 40px;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__track .splide__list .splide__slide h1,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__track .splide__list .splide__slide h1 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 400;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__track .splide__list .splide__slide p,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__track .splide__list .splide__slide p {
+  margin: 0px 5px 0px 5px;
+  text-align: center;
+  font-weight: 300;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__arrow,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__arrow {
+  margin: 0px 14% 0px 14%;
+  cursor: pointer;
+  background-color: transparent;
+  width: 30px;
+  height: 30px;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__arrow img,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__arrow img {
+  width: 100%;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__pagination li > button,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__pagination li > button {
+  background-color: rgba(255, 255, 255, 0.158);
+  margin: 0px 3px 0px 3px;
+  border-radius: 0px;
+  height: 7px;
+  width: 25px;
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__pagination li > button:hover,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__pagination li > button:hover {
+  background-color: rgba(255, 255, 255, 0.267);
+}
+
+#container-countries .container-brunei .content .content-holidays .splide .splide__pagination li > button.is-active,
+#container-countries .container-cambodia .content .content-holidays .splide .splide__pagination li > button.is-active {
+  transform: scale(1);
+  background-color: #f5f5f5;
+}
+
+#container-countries .container-brunei .content .content-festivals,
+#container-countries .container-cambodia .content .content-festivals {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  place-items: center;
+  grid-template-rows: 50% 50%;
+  padding: 170px 0px 80px 0px;
+}
+
+#container-countries .container-brunei .content .content-festivals .primary-slider,
+#container-countries .container-cambodia .content .content-festivals .primary-slider {
+  width: 60%;
+  height: fit-content;
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.295), 0 0px 41px rgba(0, 0, 0, 0.24);
+}
+
+#container-countries .container-brunei .content .content-festivals .primary-slider .splide__slide,
+#container-countries .container-cambodia .content .content-festivals .primary-slider .splide__slide {
+  display: grid;
+  place-items: center;
+}
+
+#container-countries .container-brunei .content .content-festivals .primary-slider .splide__slide span,
+#container-countries .container-cambodia .content .content-festivals .primary-slider .splide__slide span {
+  margin-top: 300px;
+  background-color: #f9d552;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 7px 40px 7px 40px;
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+}
+
+#container-countries .container-brunei .content .content-festivals .secondary-slider,
+#container-countries .container-cambodia .content .content-festivals .secondary-slider {
+  width: 40%;
+}
+
+#container-countries .container-brunei .content .content-festivals .secondary-slider .splide__track .splide__list .splide__slide,
+#container-countries .container-cambodia .content .content-festivals .secondary-slider .splide__track .splide__list .splide__slide {
+  transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+#container-countries .container-brunei .content .content-festivals .secondary-slider .splide__track .splide__list .splide__slide.is-active,
+#container-countries .container-cambodia .content .content-festivals .secondary-slider .splide__track .splide__list .splide__slide.is-active {
+  border: 2.5px solid #253680;
+}
+
+#container-countries .container-brunei .content .content-festivals .secondary-slider .splide__arrow,
+#container-countries .container-cambodia .content .content-festivals .secondary-slider .splide__arrow {
+  background-color: transparent;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+}
+
+#container-countries .container-brunei .content .content-festivals .secondary-slider .splide__arrow img,
+#container-countries .container-cambodia .content .content-festivals .secondary-slider .splide__arrow img {
+  width: 50%;
+}
+
+#container-countries .container-brunei .content .content-superstition,
+#container-countries .container-cambodia .content .content-superstition {
+  width: 100vw;
+  height: 100vh;
+  background-color: #253680;
+  display: none;
+  place-items: center;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions {
+  width: 60%;
+  height: 50%;
+  margin-bottom: 120px;
+  display: grid;
+  justify-content: center;
+  grid-template-rows: repeat(4, 140px);
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 1rem;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions .superstition,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions .superstition {
+  padding: 5px 20px 5px 20px;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  width: 250px;
+  height: 200;
+  color: #f5f5f5;
+  background-color: #3147a7;
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions .superstition:hover,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions .superstition:hover {
+  z-index: 5;
+  transform: scale(1.3);
+}
+
+#container-countries .container-brunei .content .content-language,
+#container-countries .container-cambodia .content .content-language {
+  width: 100vw;
+  height: 100vh;
+  color: #f9d552;
+  background-color: #253680;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 40% 40%;
+  column-gap: 70px;
+}
+
+#container-countries .container-brunei .content .content-language canvas,
+#container-countries .container-cambodia .content .content-language canvas {
+  margin-bottom: 120px;
+}
+
+#container-countries .container-brunei .content .content-language .language-breakdown,
+#container-countries .container-cambodia .content .content-language .language-breakdown {
+  margin-bottom: 120px;
+  display: grid;
+}
+
+#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row,
+#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row {
+  height: 230px;
+  margin-top: 30px;
+}
+
+#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row h1,
+#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row h1 {
+  font-weight: 300;
+  font-size: 2.3rem;
+}
+
+#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row .cards {
+  display: grid;
+  grid-template-rows: repeat(4, 30px);
+  grid-template-columns: repeat(auto-fit, 250px);
+  gap: 0.5rem;
+  row-gap: 40px;
+}
+
+#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row .cards .card {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  width: 250px;
+  height: 60px;
+  color: #f5f5f5;
+  background-color: #3147a7;
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row .cards .card:hover {
+  z-index: 5;
+  transform: scale(1.1);
+}
+
+#container-countries .container-brunei .content .content-infrastructure,
+#container-countries .container-cambodia .content .content-infrastructure {
+  width: 100vw;
+  height: 100vh;
+  background-color: #253680;
+  background-image: url("../../dist/img/Artboard 1.png");
+  background-attachment: fixed;
+  background-position: 70% 5%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: none;
+  place-items: center;
+}
+
+#container-countries .container-brunei .content .content-infrastructure .folder,
+#container-countries .container-cambodia .content .content-infrastructure .folder {
+  display: grid;
+  place-items: center;
+  width: 70%;
+  height: 40%;
+  margin-bottom: 80px;
+}
+
+#container-countries .container-brunei .content .content-infrastructure .folder .folder-container-tabs,
+#container-countries .container-cambodia .content .content-infrastructure .folder .folder-container-tabs {
+  width: 100%;
+  height: 60px;
+}
+
+#container-countries .container-brunei .content .content-infrastructure .folder .folder-content,
+#container-countries .container-cambodia .content .content-infrastructure .folder .folder-content {
+  width: 100%;
+  height: 350px;
 }
 
 .country-navbar {
@@ -362,11 +824,6 @@ header nav #menu-burger .line {
   visibility: visible;
 }
 
-.country-navbar .navbar-btn:first-of-type {
-  background-color: #f5f5f5;
-  border: 1.5px solid #f5f5f5;
-}
-
 .country-navbar .navbar-btn:last-of-type {
   background-color: #253680;
   border: 1.5px solid #f9d552;
@@ -374,6 +831,63 @@ header nav #menu-burger .line {
 
 .country-navbar .navbar-btn img {
   pointer-events: none;
+}
+
+.country-navbar .active-btn-navbar {
+  background-color: #f5f5f5;
+  border: 1.5px solid #f5f5f5;
+}
+
+#modal-country {
+  position: absolute;
+  bottom: 100px;
+  left: -185px;
+  opacity: 0;
+  overflow: hidden;
+  width: 180px;
+  height: 180px;
+  background-color: rgba(255, 255, 255, 0.658);
+  box-shadow: 0 0px 18px rgba(0, 0, 0, 0.22);
+  border-radius: 10px;
+  font-family: "Roboto";
+  padding: 14px 20px 25px 20px;
+  display: grid;
+  place-items: center;
+}
+
+#modal-country #country-modal-close {
+  cursor: pointer;
+  justify-self: flex-end;
+  width: 12%;
+}
+
+#modal-country #modal-country-name {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #253680;
+  text-align: center;
+}
+
+#modal-country #modal-country-img {
+  width: 40%;
+}
+
+#modal-country h1 {
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+
+#modal-country #btn-go-country {
+  width: 100%;
+  bottom: 0px;
+  position: absolute;
+  cursor: pointer;
+  border: none;
+  text-align: center;
+  padding: 10px 0px 10px 0px;
+  background-color: #253680;
+  color: #f5f5f5;
+  font-size: 0.8rem;
 }
 
 body {
