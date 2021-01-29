@@ -307,8 +307,8 @@ am4core.ready(function () {
   getMap("chartdivMyanmar", am4geodata_myanmarLow);
   getMap("chartdivPhilippines", am4geodata_philippinesLow);
   getMap("chartdivSingapore", am4geodata_singaporeLow);
-  // getMap("chartdivThailand", am4geodata_thailandLow);
-  // getMap("chartdivVietnam", am4geodata_vietnamLow);
+  getMap("chartdivThailand", am4geodata_thailandLow);
+  getMap("chartdivVietnam", am4geodata_vietnamLow);
 });
 
 function getMap(idDiv, geoData) {

@@ -13,8 +13,8 @@ splide(".splide-malaysia", ".secondary-malaysia", ".primary-malaysia");
 splide(".splide-myanmar", ".secondary-myanmar", ".primary-myanmar");
 splide(".splide-philippines", ".secondary-philippines", ".primary-philippines");
 splide(".splide-singapore", ".secondary-singapore", ".primary-singapore");
-// splide(".splide-thailand", ".secondary-thailand", ".primary-thailand");
-// splide(".splide-vietnam", ".secondary-vietnam", ".primary-vietnam");
+splide(".splide-thailand", ".secondary-thailand", ".primary-thailand");
+splide(".splide-vietnam", ".secondary-vietnam", ".primary-vietnam");
 
 function splide(splideElem, secondSlide, primSlide) {
   var splide = new Splide(splideElem, {

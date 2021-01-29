@@ -314,7 +314,23 @@ header nav #menu-burger .line {
   justify-content: center;
   align-content: center;
   text-align: center;
+  place-items: center;
   grid-template-rows: repeat(2, 70px);
+}
+
+#container-countries .container-brunei .content .content-overview .country-info img,
+#container-countries .container-cambodia .content .content-overview .country-info img,
+#container-countries .container-indonesia .content .content-overview .country-info img,
+#container-countries .container-laos .content .content-overview .country-info img,
+#container-countries .container-malaysia .content .content-overview .country-info img,
+#container-countries .container-myanmar .content .content-overview .country-info img,
+#container-countries .container-philippines .content .content-overview .country-info img,
+#container-countries .container-singapore .content .content-overview .country-info img,
+#container-countries .container-thailand .content .content-overview .country-info img,
+#container-countries .container-vietnam .content .content-overview .country-info img {
+  width: 100%;
+  margin-bottom: 120px;
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 20px rgba(0, 0, 0, 0.14);
 }
 
 #container-countries .container-brunei .content .content-overview .country-info h1,
@@ -1502,7 +1518,7 @@ header nav #menu-burger .line {
   justify-content: center;
   align-items: center;
   grid-template-columns: 40% 40%;
-  column-gap: 70px;
+  column-gap: 90px;
 }
 
 #container-countries .container-brunei .content .content-language canvas,

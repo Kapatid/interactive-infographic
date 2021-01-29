@@ -593,3 +593,147 @@ makeChart("doughnut-chart-language-singapore", {
   ],
 });
 /*---------- END OF SINGAPORE ---------- */
+
+/*---------- THAILAND ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-thailand", {
+  labels: ["Muslim", "Buddhism", "Catholic Christians", "Others"],
+  datasets: [
+    {
+      label: "Thailand Religions",
+      data: [4.3, 94.6, 1, 0.1],
+      backgroundColor: ["#253680", "#f5f5f5", "#253680", "#253680"],
+      borderColor: ["#f9d552", "#f9d552", "#f9d552", "#f9d552"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-thailand", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Thailand Languages",
+      data: [100],
+      backgroundColor: ["#f9d552"],
+      borderColor: ["#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF THAILAND ---------- */
+
+/*---------- VIETNAM ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-vietnam", {
+  labels: [
+    "No religion or folk belief",
+    "Buddhism",
+    "Catholicism",
+    "Protestantism",
+    "Hoahaoism",
+    "Caodaism",
+    "Others",
+  ],
+  datasets: [
+    {
+      label: "Vietnam Religions",
+      data: [73.7, 14.9, 7.4, 1.1, 1.5, 1.2, 0.2],
+      backgroundColor: [
+        "#f5f5f5",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+      ],
+      borderColor: [
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+      ],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-vietnam", {
+  labels: ["Kinh", "Tay", "Thai", "Muong", "Hmong", "Khmer", "Nung", "Other"],
+  datasets: [
+    {
+      label: "Vietnam Languages",
+      data: [85.32, 1.92, 1.89, 1.51, 1.45, 1.37, 1.13, 5.41],
+      backgroundColor: [
+        "#f5f5f5",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+      ],
+      borderColor: [
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+      ],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF VIETNAM ---------- */
