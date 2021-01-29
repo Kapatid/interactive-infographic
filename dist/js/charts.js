@@ -513,3 +513,83 @@ makeChart("doughnut-chart-language-philippines", {
   ],
 });
 /*---------- END OF PHILIPPINES ---------- */
+
+/*---------- SINGAPORE ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-singapore", {
+  labels: [
+    "Hindu",
+    "Muslim",
+    "Buddhist",
+    "Christian",
+    "Taoist",
+    "Others",
+    "None",
+  ],
+  datasets: [
+    {
+      label: "Singapore Religions",
+      data: [5, 14, 33.2, 18.8, 10, 0.6, 18.5],
+      backgroundColor: [
+        "#253680",
+        "#253680",
+        "#f5f5f5",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+      ],
+      borderColor: [
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+      ],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-singapore", {
+  labels: [
+    "Ethnically chinese",
+    "Malay",
+    "Indians",
+    "Eurasians, Filipino, Japanese, Korean, Vietnamese & Caucasian",
+  ],
+  datasets: [
+    {
+      label: "Singapore Languages",
+      data: [74, 13.5, 10, 2.5],
+      backgroundColor: ["#f5f5f5", "#f9d552", "#f9d552", "#f9d552"],
+      borderColor: ["#253680", "#253680", "#253680", "#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF SINGAPORE ---------- */
