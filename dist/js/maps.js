@@ -301,6 +301,14 @@ am4core.ready(function () {
 
   getMap("chartdivBrunei", am4geodata_bruneiDarussalamHigh);
   getMap("chartdivCambodia", am4geodata_cambodiaLow);
+  getMap("chartdivIndonesia", am4geodata_indonesiaLow);
+  getMap("chartdivLaos", am4geodata_laosLow);
+  getMap("chartdivMalaysia", am4geodata_malaysiaLow);
+  getMap("chartdivMyanmar", am4geodata_myanmarLow);
+  getMap("chartdivPhilippines", am4geodata_philippinesLow);
+  // getMap("chartdivSingapore", am4geodata_singaporeLow);
+  // getMap("chartdivThailand", am4geodata_thailandLow);
+  // getMap("chartdivVietnam", am4geodata_vietnamLow);
 });
 
 function getMap(idDiv, geoData) {

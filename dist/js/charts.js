@@ -252,3 +252,264 @@ makeChart("doughnut-chart-language-cambodia", {
   ],
 });
 /*---------- END OF CAMBODIA ---------- */
+
+/*---------- INDONESIA ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-indonesia", {
+  labels: ["Christian", "Muslim"],
+  datasets: [
+    {
+      label: "Cambodia Religions",
+      data: [9.7, 87],
+      backgroundColor: ["#253680", "#f5f5f5"],
+      borderColor: ["#f9d552", "#f9d552"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-indonesia", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Indonesia Languages",
+      data: [100],
+      backgroundColor: ["#f9d552"],
+      borderColor: ["#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF INDONESIA ---------- */
+
+/*---------- LAOS ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-laos", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Laos Religions",
+      data: [100],
+      backgroundColor: ["#253680"],
+      borderColor: ["#f9d552"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-laos", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Laos Languages",
+      data: [100],
+      backgroundColor: ["#f9d552"],
+      borderColor: ["#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF LAOS ---------- */
+
+/*---------- MALAYSIA ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-malaysia", {
+  labels: [
+    "Buddhism",
+    "Hinduism",
+    "Christianity",
+    "Islam",
+    "Traditional Chinese Religions",
+  ],
+  datasets: [
+    {
+      label: "Malaysia Religions",
+      data: [19.8, 6.3, 9.2, 61.3, 3.4],
+      backgroundColor: ["#253680", "#253680", "#253680", "#f5f5f5", "#253680"],
+      borderColor: ["#f9d552", "#f9d552", "#f9d552", "#f9d552", "#f9d552"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-malaysia", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Malaysia Languages",
+      data: [100],
+      backgroundColor: ["#f9d552"],
+      borderColor: ["#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF MALAYSIA ---------- */
+
+/*---------- MYANMAR ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-myanmar", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Myanmar Religions",
+      data: [100],
+      backgroundColor: ["#253680"],
+      borderColor: ["#f9d552"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-myanmar", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Myanmar Languages",
+      data: [100],
+      backgroundColor: ["#f9d552"],
+      borderColor: ["#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF MYANMAR ---------- */
+
+/*---------- PHILIPPINES ---------- */
+// Religion Doughnut Chart
+editOptions("RELIGION", "#253680", {
+  display: true,
+  position: "left",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+  },
+});
+makeChart("doughnut-chart-religion-philippines", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Philippines Religions",
+      data: [100],
+      backgroundColor: ["#253680"],
+      borderColor: ["#f9d552"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+
+// Language Doughnut Chart
+editOptions("LANGUAGE", "#f9d552", {
+  display: true,
+  position: "bottom",
+  labels: {
+    boxWidth: 30,
+    padding: 25,
+    fontFamily: "Roboto",
+    fontColor: "#f5f5f5",
+  },
+});
+makeChart("doughnut-chart-language-philippines", {
+  labels: ["N/A"],
+  datasets: [
+    {
+      label: "Philippines Languages",
+      data: [100],
+      backgroundColor: ["#f9d552"],
+      borderColor: ["#253680"],
+      borderWidth: 6,
+      hoverBorderWidth: 2,
+    },
+  ],
+});
+/*---------- END OF PHILIPPINES ---------- */

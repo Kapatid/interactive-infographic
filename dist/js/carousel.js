@@ -7,6 +7,14 @@ var secondarySplide = [];
 
 splide(".splide", ".secondary-slider", ".primary-slider");
 splide(".splide-cambodia", ".secondary-cambodia", ".primary-cambodia");
+splide(".splide-indonesia", ".secondary-indonesia", ".primary-indonesia");
+splide(".splide-laos", ".secondary-laos", ".primary-laos");
+splide(".splide-malaysia", ".secondary-malaysia", ".primary-malaysia");
+splide(".splide-myanmar", ".secondary-myanmar", ".primary-myanmar");
+splide(".splide-philippines", ".secondary-philippines", ".primary-philippines");
+// splide(".splide-singapore", ".secondary-singapore", ".primary-singapore");
+// splide(".splide-thailand", ".secondary-thailand", ".primary-thailand");
+// splide(".splide-vietnam", ".secondary-vietnam", ".primary-vietnam");
 
 function splide(splideElem, secondSlide, primSlide) {
   var splide = new Splide(splideElem, {
