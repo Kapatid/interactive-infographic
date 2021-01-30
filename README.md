@@ -9,4 +9,9 @@ Frontend - [@Kapatid](https://github.com/Kapatid/php-proj)
 
 ### Build
 
-Simple site not including any backend. Animation engine used: [Anime.js](https://github.com/juliangarnier/anime/).
+Simple site not including any backend.
+
+Animations: [Anime.js](https://github.com/juliangarnier/anime/)\
+Maps: [AMCHARTS](https://github.com/amcharts/amcharts4)\
+Charts: [Chart.js](https://github.com/chartjs/Chart.js)\
+Slides / Carousels: [Splidejs](https://github.com/Splidejs/splide)
