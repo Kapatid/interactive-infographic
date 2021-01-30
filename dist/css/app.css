@@ -241,6 +241,7 @@ header nav #menu-burger .line {
   right: 0;
   left: 100%;
   bottom: 0;
+  overflow: hidden;
   font-family: "Roboto", sans-serif;
   color: #253680;
   z-index: 10;
@@ -283,6 +284,123 @@ header nav #menu-burger .line {
   place-items: center;
 }
 
+#container-countries .container-brunei .content .content-arts,
+#container-countries .container-brunei .content .content-commute,
+#container-countries .container-brunei .content .content-famous-bldgs,
+#container-countries .container-brunei .content .content-festivals,
+#container-countries .container-brunei .content .content-food,
+#container-countries .container-brunei .content .content-holidays,
+#container-countries .container-brunei .content .content-infrastructure,
+#container-countries .container-brunei .content .content-language,
+#container-countries .container-brunei .content .content-overview,
+#container-countries .container-brunei .content .content-religion,
+#container-countries .container-brunei .content .content-superstition,
+#container-countries .container-cambodia .content .content-arts,
+#container-countries .container-cambodia .content .content-commute,
+#container-countries .container-cambodia .content .content-famous-bldgs,
+#container-countries .container-cambodia .content .content-festivals,
+#container-countries .container-cambodia .content .content-food,
+#container-countries .container-cambodia .content .content-holidays,
+#container-countries .container-cambodia .content .content-infrastructure,
+#container-countries .container-cambodia .content .content-language,
+#container-countries .container-cambodia .content .content-overview,
+#container-countries .container-cambodia .content .content-religion,
+#container-countries .container-cambodia .content .content-superstition,
+#container-countries .container-indonesia .content .content-arts,
+#container-countries .container-indonesia .content .content-commute,
+#container-countries .container-indonesia .content .content-famous-bldgs,
+#container-countries .container-indonesia .content .content-festivals,
+#container-countries .container-indonesia .content .content-food,
+#container-countries .container-indonesia .content .content-holidays,
+#container-countries .container-indonesia .content .content-infrastructure,
+#container-countries .container-indonesia .content .content-language,
+#container-countries .container-indonesia .content .content-overview,
+#container-countries .container-indonesia .content .content-religion,
+#container-countries .container-indonesia .content .content-superstition,
+#container-countries .container-laos .content .content-arts,
+#container-countries .container-laos .content .content-commute,
+#container-countries .container-laos .content .content-famous-bldgs,
+#container-countries .container-laos .content .content-festivals,
+#container-countries .container-laos .content .content-food,
+#container-countries .container-laos .content .content-holidays,
+#container-countries .container-laos .content .content-infrastructure,
+#container-countries .container-laos .content .content-language,
+#container-countries .container-laos .content .content-overview,
+#container-countries .container-laos .content .content-religion,
+#container-countries .container-laos .content .content-superstition,
+#container-countries .container-malaysia .content .content-arts,
+#container-countries .container-malaysia .content .content-commute,
+#container-countries .container-malaysia .content .content-famous-bldgs,
+#container-countries .container-malaysia .content .content-festivals,
+#container-countries .container-malaysia .content .content-food,
+#container-countries .container-malaysia .content .content-holidays,
+#container-countries .container-malaysia .content .content-infrastructure,
+#container-countries .container-malaysia .content .content-language,
+#container-countries .container-malaysia .content .content-overview,
+#container-countries .container-malaysia .content .content-religion,
+#container-countries .container-malaysia .content .content-superstition,
+#container-countries .container-myanmar .content .content-arts,
+#container-countries .container-myanmar .content .content-commute,
+#container-countries .container-myanmar .content .content-famous-bldgs,
+#container-countries .container-myanmar .content .content-festivals,
+#container-countries .container-myanmar .content .content-food,
+#container-countries .container-myanmar .content .content-holidays,
+#container-countries .container-myanmar .content .content-infrastructure,
+#container-countries .container-myanmar .content .content-language,
+#container-countries .container-myanmar .content .content-overview,
+#container-countries .container-myanmar .content .content-religion,
+#container-countries .container-myanmar .content .content-superstition,
+#container-countries .container-philippines .content .content-arts,
+#container-countries .container-philippines .content .content-commute,
+#container-countries .container-philippines .content .content-famous-bldgs,
+#container-countries .container-philippines .content .content-festivals,
+#container-countries .container-philippines .content .content-food,
+#container-countries .container-philippines .content .content-holidays,
+#container-countries .container-philippines .content .content-infrastructure,
+#container-countries .container-philippines .content .content-language,
+#container-countries .container-philippines .content .content-overview,
+#container-countries .container-philippines .content .content-religion,
+#container-countries .container-philippines .content .content-superstition,
+#container-countries .container-singapore .content .content-arts,
+#container-countries .container-singapore .content .content-commute,
+#container-countries .container-singapore .content .content-famous-bldgs,
+#container-countries .container-singapore .content .content-festivals,
+#container-countries .container-singapore .content .content-food,
+#container-countries .container-singapore .content .content-holidays,
+#container-countries .container-singapore .content .content-infrastructure,
+#container-countries .container-singapore .content .content-language,
+#container-countries .container-singapore .content .content-overview,
+#container-countries .container-singapore .content .content-religion,
+#container-countries .container-singapore .content .content-superstition,
+#container-countries .container-thailand .content .content-arts,
+#container-countries .container-thailand .content .content-commute,
+#container-countries .container-thailand .content .content-famous-bldgs,
+#container-countries .container-thailand .content .content-festivals,
+#container-countries .container-thailand .content .content-food,
+#container-countries .container-thailand .content .content-holidays,
+#container-countries .container-thailand .content .content-infrastructure,
+#container-countries .container-thailand .content .content-language,
+#container-countries .container-thailand .content .content-overview,
+#container-countries .container-thailand .content .content-religion,
+#container-countries .container-thailand .content .content-superstition,
+#container-countries .container-vietnam .content .content-arts,
+#container-countries .container-vietnam .content .content-commute,
+#container-countries .container-vietnam .content .content-famous-bldgs,
+#container-countries .container-vietnam .content .content-festivals,
+#container-countries .container-vietnam .content .content-food,
+#container-countries .container-vietnam .content .content-holidays,
+#container-countries .container-vietnam .content .content-infrastructure,
+#container-countries .container-vietnam .content .content-language,
+#container-countries .container-vietnam .content .content-overview,
+#container-countries .container-vietnam .content .content-religion,
+#container-countries .container-vietnam .content .content-superstition {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0 0px 3.8px rgba(0, 0, 0, 0.145), 0 0px 30px rgba(0, 0, 0, 0.29);
+}
+
 #container-countries .container-brunei .content .content-overview,
 #container-countries .container-cambodia .content .content-overview,
 #container-countries .container-indonesia .content .content-overview,
@@ -293,8 +411,8 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-overview,
 #container-countries .container-thailand .content .content-overview,
 #container-countries .container-vietnam .content .content-overview {
-  width: 80%;
-  height: 70vh;
+  background-color: #f9d552;
+  padding: 120px 100px 180px 100px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 50px;
@@ -395,8 +513,6 @@ header nav #menu-burger .line {
 #container-countries .container-thailand .content .content-famous-bldgs,
 #container-countries .container-vietnam .content .content-food,
 #container-countries .container-vietnam .content .content-famous-bldgs {
-  width: 100%;
-  height: 100vh;
   background-color: #253680;
   display: none;
   place-items: center;
@@ -1047,46 +1163,60 @@ header nav #menu-burger .line {
 #container-countries .container-brunei .content .content-religion,
 #container-countries .container-brunei .content .content-arts,
 #container-countries .container-brunei .content .content-commute,
-#container-countries .container-brunei .content .content-infrastructure,
 #container-countries .container-cambodia .content .content-religion,
 #container-countries .container-cambodia .content .content-arts,
 #container-countries .container-cambodia .content .content-commute,
-#container-countries .container-cambodia .content .content-infrastructure,
 #container-countries .container-indonesia .content .content-religion,
 #container-countries .container-indonesia .content .content-arts,
 #container-countries .container-indonesia .content .content-commute,
-#container-countries .container-indonesia .content .content-infrastructure,
 #container-countries .container-laos .content .content-religion,
 #container-countries .container-laos .content .content-arts,
 #container-countries .container-laos .content .content-commute,
-#container-countries .container-laos .content .content-infrastructure,
 #container-countries .container-malaysia .content .content-religion,
 #container-countries .container-malaysia .content .content-arts,
 #container-countries .container-malaysia .content .content-commute,
-#container-countries .container-malaysia .content .content-infrastructure,
 #container-countries .container-myanmar .content .content-religion,
 #container-countries .container-myanmar .content .content-arts,
 #container-countries .container-myanmar .content .content-commute,
-#container-countries .container-myanmar .content .content-infrastructure,
 #container-countries .container-philippines .content .content-religion,
 #container-countries .container-philippines .content .content-arts,
 #container-countries .container-philippines .content .content-commute,
-#container-countries .container-philippines .content .content-infrastructure,
 #container-countries .container-singapore .content .content-religion,
 #container-countries .container-singapore .content .content-arts,
 #container-countries .container-singapore .content .content-commute,
-#container-countries .container-singapore .content .content-infrastructure,
 #container-countries .container-thailand .content .content-religion,
 #container-countries .container-thailand .content .content-arts,
 #container-countries .container-thailand .content .content-commute,
-#container-countries .container-thailand .content .content-infrastructure,
 #container-countries .container-vietnam .content .content-religion,
 #container-countries .container-vietnam .content .content-arts,
-#container-countries .container-vietnam .content .content-commute,
-#container-countries .container-vietnam .content .content-infrastructure {
-  width: 80%;
+#container-countries .container-vietnam .content .content-commute {
+  background-color: #f9d552;
+  padding: 90px 100px 200px 100px;
   display: none;
   place-items: center;
+}
+
+#container-countries .container-brunei .content .content-arts,
+#container-countries .container-brunei .content .content-commute,
+#container-countries .container-cambodia .content .content-arts,
+#container-countries .container-cambodia .content .content-commute,
+#container-countries .container-indonesia .content .content-arts,
+#container-countries .container-indonesia .content .content-commute,
+#container-countries .container-laos .content .content-arts,
+#container-countries .container-laos .content .content-commute,
+#container-countries .container-malaysia .content .content-arts,
+#container-countries .container-malaysia .content .content-commute,
+#container-countries .container-myanmar .content .content-arts,
+#container-countries .container-myanmar .content .content-commute,
+#container-countries .container-philippines .content .content-arts,
+#container-countries .container-philippines .content .content-commute,
+#container-countries .container-singapore .content .content-arts,
+#container-countries .container-singapore .content .content-commute,
+#container-countries .container-thailand .content .content-arts,
+#container-countries .container-thailand .content .content-commute,
+#container-countries .container-vietnam .content .content-arts,
+#container-countries .container-vietnam .content .content-commute {
+  padding: 120px 100px 220px 100px;
 }
 
 #container-countries .container-brunei .content .content-holidays,
@@ -1099,10 +1229,7 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-holidays,
 #container-countries .container-thailand .content .content-holidays,
 #container-countries .container-vietnam .content .content-holidays {
-  width: 100vw;
-  height: 100vh;
   background-color: #253680;
-  overflow: hidden;
   display: none;
   place-items: center;
 }
@@ -1299,12 +1426,11 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-festivals,
 #container-countries .container-thailand .content .content-festivals,
 #container-countries .container-vietnam .content .content-festivals {
-  width: 100vw;
-  height: 100vh;
   display: none;
   place-items: center;
   grid-template-rows: 50% 50%;
   padding: 170px 0px 80px 0px;
+  background-color: #253680;
 }
 
 #container-countries .container-brunei .content .content-festivals .primary-slider,
@@ -1434,8 +1560,6 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-superstition,
 #container-countries .container-thailand .content .content-superstition,
 #container-countries .container-vietnam .content .content-superstition {
-  width: 100vw;
-  height: 100vh;
   background-color: #253680;
   display: none;
   place-items: center;
@@ -1510,8 +1634,6 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-language,
 #container-countries .container-thailand .content .content-language,
 #container-countries .container-vietnam .content .content-language {
-  width: 100vw;
-  height: 100vh;
   color: #f9d552;
   background-color: #253680;
   display: none;
@@ -1641,8 +1763,6 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-infrastructure,
 #container-countries .container-thailand .content .content-infrastructure,
 #container-countries .container-vietnam .content .content-infrastructure {
-  width: 100vw;
-  height: 100vh;
   background-color: #253680;
   background-image: url("../../dist/img/Artboard 1.png");
   background-position: 70% 5%;
@@ -1701,6 +1821,7 @@ header nav #menu-burger .line {
   position: absolute;
   top: 82%;
   width: 100%;
+  z-index: 20;
   display: grid;
   align-items: center;
   justify-content: center;

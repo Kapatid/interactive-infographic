@@ -99,7 +99,8 @@ document
   });
 
 /* ----------- COUNTRY PAGE EVENTS / ANIMATIONS ----------- */
-
+var changePage = true;
+// Set the corresponding page to each navbar button
 addEventToBtn(".btn-overview", 0);
 addEventToBtn(".btn-food", 1);
 addEventToBtn(".btn-religion", 2);
@@ -115,8 +116,11 @@ addEventToBtn(".btn-infrastructure", 10);
 function addEventToBtn(elName, elNum) {
   document.querySelectorAll(elName).forEach((item) => {
     item.addEventListener("click", (btn) => {
-      getContents(btn.target, elNum);
-      buttonStyle(btn.target);
+      if (changePage == true) {
+        // Avoid sudden page change
+        getContents(btn.target, elNum); // Add animations to page
+        buttonStyle(btn.target); // Style button
+      }
     });
   });
 }
@@ -154,22 +158,52 @@ function getContents(el, showContent) {
 
   var foundElem = el.parentElement.previousElementSibling;
 
-  contentDivs.forEach((item) => {
-    foundElem.getElementsByClassName(item)[0].style.display = "none";
-  });
-
+  // Target info page of country
   foundElem.getElementsByClassName(contentDivs[showContent])[0].style.display =
     "grid";
 
-  // Fix SplideJS slides by refreshing them
-  splides.forEach((splide) => {
-    splide.refresh();
-  });
-  primarySplide.forEach((splide) => {
-    splide.refresh();
-  });
-  secondarySplide.forEach((splide) => {
-    splide.refresh();
+  anime({
+    targets: foundElem.getElementsByClassName(contentDivs[showContent])[0],
+    left: ["100%", 0],
+    easing: "cubicBezier(.5, .05, .5, .5)",
+    duration: 500,
+    begin: function (anim) {
+      changePage = false;
+
+      // Previous info pages of country
+      contentDivs.forEach((item) => {
+        $(foundElem.getElementsByClassName(item)).css({ "z-index": 1 });
+
+        if (
+          item !=
+          foundElem
+            .getElementsByClassName(contentDivs[showContent])[0]
+            .className.split(" ")[0]
+        ) {
+          setTimeout(function () {
+            foundElem.getElementsByClassName(item)[0].style.display = "none";
+          }, 500);
+        }
+      });
+
+      // Target info page of country
+      $(foundElem.getElementsByClassName(contentDivs[showContent])[0]).css({
+        "z-index": 3,
+      });
+
+      splides.forEach((splide) => {
+        splide.refresh();
+      });
+      primarySplide.forEach((splide) => {
+        splide.refresh();
+      });
+      secondarySplide.forEach((splide) => {
+        splide.refresh();
+      });
+    },
+    complete: function () {
+      changePage = true;
+    },
   });
 }
 

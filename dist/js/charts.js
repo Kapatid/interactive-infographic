@@ -475,13 +475,13 @@ editOptions("RELIGION", "#253680", {
   },
 });
 makeChart("doughnut-chart-religion-philippines", {
-  labels: ["N/A"],
+  labels: ["Protestant", "Catholic", "Muslim"],
   datasets: [
     {
       label: "Philippines Religions",
-      data: [100],
-      backgroundColor: ["#253680"],
-      borderColor: ["#f9d552"],
+      data: [10.8, 80.58, 5.57],
+      backgroundColor: ["#253680", "#f5f5f5", "#253680"],
+      borderColor: ["#f9d552", "#f9d552", "#f9d552"],
       borderWidth: 6,
       hoverBorderWidth: 2,
     },
