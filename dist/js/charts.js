@@ -268,7 +268,7 @@ makeChart("doughnut-chart-religion-indonesia", {
   labels: ["Christian", "Muslim"],
   datasets: [
     {
-      label: "Cambodia Religions",
+      label: "indonesia Religions",
       data: [9.7, 87],
       backgroundColor: ["#253680", "#f5f5f5"],
       borderColor: ["#f9d552", "#f9d552"],
@@ -290,13 +290,40 @@ editOptions("LANGUAGE", "#f9d552", {
   },
 });
 makeChart("doughnut-chart-language-indonesia", {
-  labels: ["N/A"],
+  labels: [
+    "Javanese",
+    "Indonesian",
+    "Other",
+    "Sundanese",
+    "Madurese",
+    "Minang",
+    "Banjar",
+    "Bali",
+  ],
   datasets: [
     {
       label: "Indonesia Languages",
-      data: [100],
-      backgroundColor: ["#f9d552"],
-      borderColor: ["#253680"],
+      data: [31.8, 19.5, 25, 14.5, 3.7, 2.0, 1.7, 1.6],
+      backgroundColor: [
+        "#f5f5f5",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+      ],
+      borderColor: [
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+      ],
       borderWidth: 6,
       hoverBorderWidth: 2,
     },

@@ -49,8 +49,6 @@ function splide(splideElem, secondSlide, primSlide) {
   var secondarySlider = new Splide(secondSlide, {
     prev: "splide__arrow--prev",
     next: "splide__arrow--next",
-    pagination: true,
-    type: "slide",
     trimSpace: false,
     drag: true,
     focus: "center",

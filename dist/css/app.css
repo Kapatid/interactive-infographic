@@ -1429,8 +1429,8 @@ header nav #menu-burger .line {
   display: none;
   place-items: center;
   grid-template-rows: 50% 50%;
-  padding: 170px 0px 80px 0px;
-  background-color: #253680;
+  padding: 140px 0px 80px 0px;
+  background-color: #f9d552;
 }
 
 #container-countries .container-brunei .content .content-festivals .primary-slider,
@@ -1531,10 +1531,11 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-festivals .secondary-slider .splide__arrow,
 #container-countries .container-thailand .content .content-festivals .secondary-slider .splide__arrow,
 #container-countries .container-vietnam .content .content-festivals .secondary-slider .splide__arrow {
+  opacity: 1;
   background-color: transparent;
   cursor: pointer;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
 }
 
 #container-countries .container-brunei .content .content-festivals .secondary-slider .splide__arrow img,
