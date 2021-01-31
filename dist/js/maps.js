@@ -222,7 +222,7 @@ am4core.ready(function () {
         easing: "cubicBezier(.5, .05, .5, .5)",
         duration: 600,
         complete: function (anim) {
-          document.querySelector("#group3").scrollIntoView({
+          document.querySelector("#map").scrollIntoView({
             behavior: "smooth",
           });
 
