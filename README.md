@@ -12,7 +12,6 @@ Frontend - [@Kapatid](https://github.com/Kapatid/php-proj)
 Just a simple site not including any backend.
 
 JS: [JQuery](https://jquery.com/)\
-Parallax: [RellaxJS](https://github.com/dixonandmoe/rellax)\
 Animations: [Anime.js](https://github.com/juliangarnier/anime/)\
 Maps: [AMCHARTS](https://github.com/amcharts/amcharts4)\
 Charts: [Chart.js](https://github.com/chartjs/Chart.js)\
