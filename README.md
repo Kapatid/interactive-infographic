@@ -9,9 +9,10 @@ Frontend - [@Kapatid](https://github.com/Kapatid/php-proj)
 
 ### Build
 
-Simple site not including any backend.
+Just a simple site not including any backend.
 
 Animations: [Anime.js](https://github.com/juliangarnier/anime/)\
 Maps: [AMCHARTS](https://github.com/amcharts/amcharts4)\
 Charts: [Chart.js](https://github.com/chartjs/Chart.js)\
-Slides / Carousels: [Splidejs](https://github.com/Splidejs/splide)
+Slides / Carousels: [Splidejs](https://github.com/Splidejs/splide)\
+Enter View: [enter-view](https://github.com/russellgoldenberg/enter-view)
