@@ -451,13 +451,19 @@ editOptions("RELIGION", "#253680", {
   },
 });
 makeChart("doughnut-chart-religion-myanmar", {
-  labels: ["na", "na"],
+  labels: [
+    "Theravada Buddhism",
+    "Christianity",
+    "Islam",
+    "Animism",
+    "Hinduism",
+  ],
   datasets: [
     {
       label: "Myanmar Religions",
-      data: [50, 50],
-      backgroundColor: ["#253680", "#f5f5f5"],
-      borderColor: ["#f9d552"],
+      data: [88, 6, 4, 0.8, 0.05],
+      backgroundColor: ["#f5f5f5", "#253680", "#253680", "#253680", "#253680"],
+      borderColor: ["#f9d552", "#f9d552", "#f9d552", "#f9d552", "#f9d552"],
       borderWidth: 6,
       hoverBorderWidth: 2,
     },
@@ -476,13 +482,40 @@ editOptions("LANGUAGE", "#f9d552", {
   },
 });
 makeChart("doughnut-chart-language-myanmar", {
-  labels: ["N/A"],
+  labels: [
+    "Shan",
+    "Kayin",
+    "Bamar",
+    "Rakhine",
+    "Mon, Kayah, Kachin",
+    "Burmese Han-Chinese",
+    "Burmese Indians",
+    "Anglo-Burmese, Anglo-Indian, Lisu, Rawang, Naga, Padaung, Moken, etc.",
+  ],
   datasets: [
     {
       label: "Myanmar Languages",
-      data: [100],
-      backgroundColor: ["#f9d552"],
-      borderColor: ["#253680"],
+      data: [9, 7, 68, 4, 2, 3, 2, 5],
+      backgroundColor: [
+        "#f9d552",
+        "#f9d552",
+        "#f5f5f5",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+        "#f9d552",
+      ],
+      borderColor: [
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+        "#253680",
+      ],
       borderWidth: 6,
       hoverBorderWidth: 2,
     },
