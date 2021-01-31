@@ -160,3 +160,15 @@ body {
     }
   }
 }
+
+#website-sources {
+  height: 7vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: #253680;
+  color: #f5f5f5;
+  font-family: "Roboto";
+  font-size: 0.8rem;
+  font-weight: 300;
+}

@@ -46,7 +46,7 @@ header nav #menu-burger .line {
   --------------------------------------------- */
 .parallax {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
@@ -58,7 +58,7 @@ header nav #menu-burger .line {
   height: 500px;
   /* fallback for older browsers */
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   transform-style: preserve-3d;
 }
 
@@ -136,7 +136,7 @@ header nav #menu-burger .line {
 }
 
 #map {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: #f9d552;
   display: grid;
@@ -176,8 +176,15 @@ header nav #menu-burger .line {
   margin-left: -60px;
 }
 
+.folder {
+  width: 100vw;
+  height: 100vh;
+  grid-template-rows: 20% 80%;
+}
+
 .folder .folder-container-tabs {
   width: 80%;
+  height: 100%;
   overflow: auto;
   display: grid;
   align-items: center;
@@ -216,7 +223,8 @@ header nav #menu-burger .line {
 
 .folder .folder-content {
   width: 80%;
-  height: 400px;
+  height: 100%;
+  margin-bottom: 40px;
   background-color: #f5f5f5;
   display: grid;
   place-items: center;
@@ -229,6 +237,23 @@ header nav #menu-burger .line {
   overflow: auto;
   display: none;
   place-items: center;
+}
+
+.folder .folder-content .folder-content-body::-webkit-scrollbar {
+  width: 6px;
+  height: 9px;
+}
+
+.folder .folder-content .folder-content-body::-webkit-scrollbar-thumb {
+  background: #364cb1;
+}
+
+.folder .folder-content .folder-content-body::-webkit-scrollbar-thumb:hover {
+  background: #283a8a;
+}
+
+.folder .folder-content .folder-content-body::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.089);
 }
 
 .folder .folder-content .folder-content-body:first-of-type {
@@ -559,14 +584,190 @@ header nav #menu-burger .line {
 #container-countries .container-vietnam .content .content-famous-bldgs .foods,
 #container-countries .container-vietnam .content .content-famous-bldgs .buildings {
   width: 60%;
-  height: 400px;
+  height: 370px;
   display: grid;
   margin-bottom: 120px;
+  overflow: auto;
   justify-content: center;
-  place-items: center;
+  align-items: center;
   grid-template-rows: repeat(4, 180px);
   grid-template-columns: repeat(auto-fit, 250px);
   gap: 0.5rem;
+}
+
+#container-countries .container-brunei .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-brunei .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-brunei .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-cambodia .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-cambodia .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-indonesia .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-indonesia .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-indonesia .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-indonesia .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-laos .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-laos .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-laos .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-laos .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-malaysia .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-malaysia .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-malaysia .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-malaysia .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-myanmar .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-myanmar .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-myanmar .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-myanmar .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-philippines .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-philippines .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-philippines .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-philippines .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-singapore .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-singapore .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-singapore .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-singapore .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-thailand .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-thailand .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-thailand .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-thailand .content .content-famous-bldgs .buildings::-webkit-scrollbar,
+#container-countries .container-vietnam .content .content-food .foods::-webkit-scrollbar,
+#container-countries .container-vietnam .content .content-food .buildings::-webkit-scrollbar,
+#container-countries .container-vietnam .content .content-famous-bldgs .foods::-webkit-scrollbar,
+#container-countries .container-vietnam .content .content-famous-bldgs .buildings::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+#container-countries .container-brunei .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-brunei .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-brunei .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-cambodia .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-cambodia .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-indonesia .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-indonesia .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-indonesia .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-indonesia .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-laos .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-laos .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-laos .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-laos .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-malaysia .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-malaysia .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-malaysia .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-malaysia .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-myanmar .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-myanmar .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-myanmar .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-myanmar .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-philippines .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-philippines .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-philippines .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-philippines .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-singapore .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-singapore .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-singapore .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-singapore .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-thailand .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-thailand .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-thailand .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-thailand .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-vietnam .content .content-food .foods::-webkit-scrollbar-thumb,
+#container-countries .container-vietnam .content .content-food .buildings::-webkit-scrollbar-thumb,
+#container-countries .container-vietnam .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb,
+#container-countries .container-vietnam .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb {
+  background: #f9d552;
+  border-radius: 5px;
+}
+
+#container-countries .container-brunei .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-brunei .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-brunei .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-cambodia .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-cambodia .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-indonesia .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-indonesia .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-indonesia .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-indonesia .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-laos .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-laos .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-laos .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-laos .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-malaysia .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-malaysia .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-malaysia .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-malaysia .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-myanmar .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-myanmar .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-myanmar .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-myanmar .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-philippines .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-philippines .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-philippines .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-philippines .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-singapore .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-singapore .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-singapore .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-singapore .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-thailand .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-thailand .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-thailand .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-thailand .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-vietnam .content .content-food .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-vietnam .content .content-food .buildings::-webkit-scrollbar-thumb:hover,
+#container-countries .container-vietnam .content .content-famous-bldgs .foods::-webkit-scrollbar-thumb:hover,
+#container-countries .container-vietnam .content .content-famous-bldgs .buildings::-webkit-scrollbar-thumb:hover {
+  background: #e0c248;
+}
+
+#container-countries .container-brunei .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-brunei .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-brunei .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-brunei .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-cambodia .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-cambodia .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-cambodia .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-cambodia .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-indonesia .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-indonesia .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-indonesia .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-indonesia .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-laos .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-laos .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-laos .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-laos .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-malaysia .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-malaysia .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-malaysia .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-malaysia .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-myanmar .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-myanmar .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-myanmar .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-myanmar .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-philippines .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-philippines .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-philippines .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-philippines .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-singapore .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-singapore .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-singapore .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-singapore .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-thailand .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-thailand .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-thailand .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-thailand .content .content-famous-bldgs .buildings::-webkit-scrollbar-track,
+#container-countries .container-vietnam .content .content-food .foods::-webkit-scrollbar-track,
+#container-countries .container-vietnam .content .content-food .buildings::-webkit-scrollbar-track,
+#container-countries .container-vietnam .content .content-famous-bldgs .foods::-webkit-scrollbar-track,
+#container-countries .container-vietnam .content .content-famous-bldgs .buildings::-webkit-scrollbar-track {
+  background: #212f6e;
+  border-radius: 5px;
 }
 
 #container-countries .container-brunei .content .content-food .foods .container-food,
@@ -653,6 +854,7 @@ header nav #menu-burger .line {
   width: 250px;
   height: 180px;
   cursor: pointer;
+  position: relative;
 }
 
 #container-countries .container-brunei .content .content-food .foods .container-food .food-name,
@@ -815,8 +1017,8 @@ header nav #menu-burger .line {
 #container-countries .container-vietnam .content .content-famous-bldgs .buildings .container-food .building-name,
 #container-countries .container-vietnam .content .content-famous-bldgs .buildings .container-building .food-name,
 #container-countries .container-vietnam .content .content-famous-bldgs .buildings .container-building .building-name {
-  width: inherit;
-  height: inherit;
+  width: 100%;
+  height: 100%;
   padding: 0px 6px 0px 6px;
   text-align: center;
   visibility: hidden;
@@ -1161,35 +1363,15 @@ header nav #menu-burger .line {
 }
 
 #container-countries .container-brunei .content .content-religion,
-#container-countries .container-brunei .content .content-arts,
-#container-countries .container-brunei .content .content-commute,
 #container-countries .container-cambodia .content .content-religion,
-#container-countries .container-cambodia .content .content-arts,
-#container-countries .container-cambodia .content .content-commute,
 #container-countries .container-indonesia .content .content-religion,
-#container-countries .container-indonesia .content .content-arts,
-#container-countries .container-indonesia .content .content-commute,
 #container-countries .container-laos .content .content-religion,
-#container-countries .container-laos .content .content-arts,
-#container-countries .container-laos .content .content-commute,
 #container-countries .container-malaysia .content .content-religion,
-#container-countries .container-malaysia .content .content-arts,
-#container-countries .container-malaysia .content .content-commute,
 #container-countries .container-myanmar .content .content-religion,
-#container-countries .container-myanmar .content .content-arts,
-#container-countries .container-myanmar .content .content-commute,
 #container-countries .container-philippines .content .content-religion,
-#container-countries .container-philippines .content .content-arts,
-#container-countries .container-philippines .content .content-commute,
 #container-countries .container-singapore .content .content-religion,
-#container-countries .container-singapore .content .content-arts,
-#container-countries .container-singapore .content .content-commute,
 #container-countries .container-thailand .content .content-religion,
-#container-countries .container-thailand .content .content-arts,
-#container-countries .container-thailand .content .content-commute,
-#container-countries .container-vietnam .content .content-religion,
-#container-countries .container-vietnam .content .content-arts,
-#container-countries .container-vietnam .content .content-commute {
+#container-countries .container-vietnam .content .content-religion {
   background-color: #f9d552;
   padding: 90px 100px 200px 100px;
   display: none;
@@ -1216,6 +1398,9 @@ header nav #menu-burger .line {
 #container-countries .container-thailand .content .content-commute,
 #container-countries .container-vietnam .content .content-arts,
 #container-countries .container-vietnam .content .content-commute {
+  display: none;
+  place-items: center;
+  background-color: #f9d552;
   padding: 120px 100px 220px 100px;
 }
 
@@ -1426,10 +1611,11 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-festivals,
 #container-countries .container-thailand .content .content-festivals,
 #container-countries .container-vietnam .content .content-festivals {
+  width: 100vw;
+  height: 100vh;
   display: none;
   place-items: center;
-  grid-template-rows: 50% 50%;
-  padding: 140px 0px 80px 0px;
+  grid-template-rows: 70% 30%;
   background-color: #f9d552;
 }
 
@@ -1444,6 +1630,7 @@ header nav #menu-burger .line {
 #container-countries .container-thailand .content .content-festivals .primary-slider,
 #container-countries .container-vietnam .content .content-festivals .primary-slider {
   width: 60%;
+  height: 100%;
   height: fit-content;
   box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.295), 0 0px 41px rgba(0, 0, 0, 0.24);
 }
@@ -1459,7 +1646,8 @@ header nav #menu-burger .line {
 #container-countries .container-thailand .content .content-festivals .primary-slider .splide__slide,
 #container-countries .container-vietnam .content .content-festivals .primary-slider .splide__slide {
   display: grid;
-  place-items: center;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 #container-countries .container-brunei .content .content-festivals .primary-slider .splide__slide span,
@@ -1472,13 +1660,13 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-festivals .primary-slider .splide__slide span,
 #container-countries .container-thailand .content .content-festivals .primary-slider .splide__slide span,
 #container-countries .container-vietnam .content .content-festivals .primary-slider .splide__slide span {
-  margin-top: 300px;
+  margin-bottom: 30px;
   background-color: #f9d552;
   font-size: 2rem;
   font-weight: 400;
   text-transform: uppercase;
   padding: 7px 40px 7px 40px;
-  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.397), 0 0px 41px rgba(0, 0, 0, 0.562);
 }
 
 #container-countries .container-brunei .content .content-festivals .secondary-slider,
@@ -1492,6 +1680,8 @@ header nav #menu-burger .line {
 #container-countries .container-thailand .content .content-festivals .secondary-slider,
 #container-countries .container-vietnam .content .content-festivals .secondary-slider {
   width: 40%;
+  display: grid;
+  margin-bottom: auto;
 }
 
 #container-countries .container-brunei .content .content-festivals .secondary-slider .splide__track .splide__list .splide__slide,
@@ -1534,8 +1724,8 @@ header nav #menu-burger .line {
   opacity: 1;
   background-color: transparent;
   cursor: pointer;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 #container-countries .container-brunei .content .content-festivals .secondary-slider .splide__arrow img,
@@ -1576,14 +1766,71 @@ header nav #menu-burger .line {
 #container-countries .container-singapore .content .content-superstition .container-superstitions,
 #container-countries .container-thailand .content .content-superstition .container-superstitions,
 #container-countries .container-vietnam .content .content-superstition .container-superstitions {
-  width: 60%;
-  height: 50%;
+  width: 63%;
+  height: 60%;
   margin-bottom: 120px;
+  padding: 20px 0px 20px 0px;
+  overflow: auto;
   display: grid;
   justify-content: center;
   grid-template-rows: repeat(4, 140px);
   grid-template-columns: repeat(auto-fit, 250px);
   gap: 1rem;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-indonesia .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-laos .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-malaysia .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-myanmar .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-philippines .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-singapore .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-thailand .content .content-superstition .container-superstitions::-webkit-scrollbar,
+#container-countries .container-vietnam .content .content-superstition .container-superstitions::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-indonesia .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-laos .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-malaysia .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-myanmar .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-philippines .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-singapore .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-thailand .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb,
+#container-countries .container-vietnam .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb {
+  background: #f9d552;
+  border-radius: 5px;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-indonesia .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-laos .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-malaysia .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-myanmar .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-philippines .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-singapore .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-thailand .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover,
+#container-countries .container-vietnam .content .content-superstition .container-superstitions::-webkit-scrollbar-thumb:hover {
+  background: #e0c248;
+}
+
+#container-countries .container-brunei .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-cambodia .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-indonesia .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-laos .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-malaysia .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-myanmar .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-philippines .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-singapore .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-thailand .content .content-superstition .container-superstitions::-webkit-scrollbar-track,
+#container-countries .container-vietnam .content .content-superstition .container-superstitions::-webkit-scrollbar-track {
+  background: #212f6e;
+  border-radius: 5px;
 }
 
 #container-countries .container-brunei .content .content-superstition .container-superstitions .superstition,
@@ -1600,10 +1847,10 @@ header nav #menu-burger .line {
   transition: all 0.5s ease;
   cursor: pointer;
   width: 250px;
-  height: 200;
+  height: 130px;
   color: #f5f5f5;
   background-color: #3147a7;
-  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 20px rgba(0, 0, 0, 0.24);
   backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
   display: grid;
@@ -1622,7 +1869,7 @@ header nav #menu-burger .line {
 #container-countries .container-thailand .content .content-superstition .container-superstitions .superstition:hover,
 #container-countries .container-vietnam .content .content-superstition .container-superstitions .superstition:hover {
   z-index: 5;
-  transform: scale(1.3);
+  transform: scale(1.15);
 }
 
 #container-countries .container-brunei .content .content-language,
@@ -1638,101 +1885,156 @@ header nav #menu-burger .line {
   color: #f9d552;
   background-color: #253680;
   display: none;
-  justify-content: center;
-  align-items: center;
-  grid-template-columns: 40% 40%;
-  column-gap: 90px;
+  place-items: center;
 }
 
-#container-countries .container-brunei .content .content-language canvas,
-#container-countries .container-cambodia .content .content-language canvas,
-#container-countries .container-indonesia .content .content-language canvas,
-#container-countries .container-laos .content .content-language canvas,
-#container-countries .container-malaysia .content .content-language canvas,
-#container-countries .container-myanmar .content .content-language canvas,
-#container-countries .container-philippines .content .content-language canvas,
-#container-countries .container-singapore .content .content-language canvas,
-#container-countries .container-thailand .content .content-language canvas,
-#container-countries .container-vietnam .content .content-language canvas {
-  margin-bottom: 120px;
+#container-countries .container-brunei .content .content-language .container-language,
+#container-countries .container-cambodia .content .content-language .container-language,
+#container-countries .container-indonesia .content .content-language .container-language,
+#container-countries .container-laos .content .content-language .container-language,
+#container-countries .container-malaysia .content .content-language .container-language,
+#container-countries .container-myanmar .content .content-language .container-language,
+#container-countries .container-philippines .content .content-language .container-language,
+#container-countries .container-singapore .content .content-language .container-language,
+#container-countries .container-thailand .content .content-language .container-language,
+#container-countries .container-vietnam .content .content-language .container-language {
+  width: 90%;
+  height: 520px;
+  margin-bottom: 70px;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 700px 620px;
 }
 
-#container-countries .container-brunei .content .content-language .language-breakdown,
-#container-countries .container-cambodia .content .content-language .language-breakdown,
-#container-countries .container-indonesia .content .content-language .language-breakdown,
-#container-countries .container-laos .content .content-language .language-breakdown,
-#container-countries .container-malaysia .content .content-language .language-breakdown,
-#container-countries .container-myanmar .content .content-language .language-breakdown,
-#container-countries .container-philippines .content .content-language .language-breakdown,
-#container-countries .container-singapore .content .content-language .language-breakdown,
-#container-countries .container-thailand .content .content-language .language-breakdown,
-#container-countries .container-vietnam .content .content-language .language-breakdown {
-  margin-bottom: 120px;
+#container-countries .container-brunei .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-cambodia .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-indonesia .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-laos .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-malaysia .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-myanmar .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-philippines .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-singapore .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-thailand .content .content-language .container-language::-webkit-scrollbar,
+#container-countries .container-vietnam .content .content-language .container-language::-webkit-scrollbar {
+  width: 9px;
+  height: 9px;
+}
+
+#container-countries .container-brunei .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-cambodia .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-indonesia .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-laos .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-malaysia .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-myanmar .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-philippines .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-singapore .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-thailand .content .content-language .container-language::-webkit-scrollbar-thumb,
+#container-countries .container-vietnam .content .content-language .container-language::-webkit-scrollbar-thumb {
+  background: #f9d552;
+  border-radius: 5px;
+}
+
+#container-countries .container-brunei .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-cambodia .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-indonesia .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-laos .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-malaysia .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-myanmar .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-philippines .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-singapore .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-thailand .content .content-language .container-language::-webkit-scrollbar-thumb:hover,
+#container-countries .container-vietnam .content .content-language .container-language::-webkit-scrollbar-thumb:hover {
+  background: #e0c248;
+}
+
+#container-countries .container-brunei .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-cambodia .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-indonesia .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-laos .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-malaysia .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-myanmar .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-philippines .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-singapore .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-thailand .content .content-language .container-language::-webkit-scrollbar-track,
+#container-countries .container-vietnam .content .content-language .container-language::-webkit-scrollbar-track {
+  background: #212f6e;
+  border-radius: 5px;
+}
+
+#container-countries .container-brunei .content .content-language .container-language .language-breakdown,
+#container-countries .container-cambodia .content .content-language .container-language .language-breakdown,
+#container-countries .container-indonesia .content .content-language .container-language .language-breakdown,
+#container-countries .container-laos .content .content-language .container-language .language-breakdown,
+#container-countries .container-malaysia .content .content-language .container-language .language-breakdown,
+#container-countries .container-myanmar .content .content-language .container-language .language-breakdown,
+#container-countries .container-philippines .content .content-language .container-language .language-breakdown,
+#container-countries .container-singapore .content .content-language .container-language .language-breakdown,
+#container-countries .container-thailand .content .content-language .container-language .language-breakdown,
+#container-countries .container-vietnam .content .content-language .container-language .language-breakdown {
   display: grid;
 }
 
-#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-indonesia .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-laos .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-malaysia .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-myanmar .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-philippines .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-singapore .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-thailand .content .content-language .language-breakdown .lb-content .row,
-#container-countries .container-vietnam .content .content-language .language-breakdown .lb-content .row {
+#container-countries .container-brunei .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-cambodia .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-indonesia .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-laos .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-malaysia .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-myanmar .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-philippines .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-singapore .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-thailand .content .content-language .container-language .language-breakdown .lb-content .row,
+#container-countries .container-vietnam .content .content-language .container-language .language-breakdown .lb-content .row {
   height: 230px;
-  margin-top: 30px;
 }
 
-#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-indonesia .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-laos .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-malaysia .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-myanmar .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-philippines .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-singapore .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-thailand .content .content-language .language-breakdown .lb-content .row h1,
-#container-countries .container-vietnam .content .content-language .language-breakdown .lb-content .row h1 {
+#container-countries .container-brunei .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-cambodia .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-indonesia .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-laos .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-malaysia .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-myanmar .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-philippines .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-singapore .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-thailand .content .content-language .container-language .language-breakdown .lb-content .row h1,
+#container-countries .container-vietnam .content .content-language .container-language .language-breakdown .lb-content .row h1 {
   font-weight: 300;
   font-size: 2.3rem;
 }
 
-#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-indonesia .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-laos .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-malaysia .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-myanmar .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-philippines .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-singapore .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-thailand .content .content-language .language-breakdown .lb-content .row .cards,
-#container-countries .container-vietnam .content .content-language .language-breakdown .lb-content .row .cards {
+#container-countries .container-brunei .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-cambodia .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-indonesia .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-laos .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-malaysia .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-myanmar .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-philippines .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-singapore .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-thailand .content .content-language .container-language .language-breakdown .lb-content .row .cards,
+#container-countries .container-vietnam .content .content-language .container-language .language-breakdown .lb-content .row .cards {
   display: grid;
   grid-template-rows: repeat(4, 30px);
   grid-template-columns: repeat(auto-fit, 250px);
-  gap: 0.5rem;
-  row-gap: 40px;
+  gap: 0.26rem;
+  row-gap: 35px;
 }
 
-#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-indonesia .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-laos .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-malaysia .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-myanmar .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-philippines .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-singapore .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-thailand .content .content-language .language-breakdown .lb-content .row .cards .card,
-#container-countries .container-vietnam .content .content-language .language-breakdown .lb-content .row .cards .card {
+#container-countries .container-brunei .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-cambodia .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-indonesia .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-laos .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-malaysia .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-myanmar .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-philippines .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-singapore .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-thailand .content .content-language .container-language .language-breakdown .lb-content .row .cards .card,
+#container-countries .container-vietnam .content .content-language .container-language .language-breakdown .lb-content .row .cards .card {
   cursor: pointer;
   transition: all 0.5s ease;
   width: 250px;
   height: 60px;
   color: #f5f5f5;
   background-color: #3147a7;
-  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 41px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 0px 5.1px rgba(0, 0, 0, 0.12), 0 0px 10px rgba(0, 0, 0, 0.24);
   backface-visibility: hidden;
   -webkit-font-smoothing: subpixel-antialiased;
   display: grid;
@@ -1740,18 +2042,18 @@ header nav #menu-burger .line {
   text-align: center;
 }
 
-#container-countries .container-brunei .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-cambodia .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-indonesia .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-laos .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-malaysia .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-myanmar .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-philippines .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-singapore .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-thailand .content .content-language .language-breakdown .lb-content .row .cards .card:hover,
-#container-countries .container-vietnam .content .content-language .language-breakdown .lb-content .row .cards .card:hover {
+#container-countries .container-brunei .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-cambodia .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-indonesia .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-laos .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-malaysia .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-myanmar .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-philippines .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-singapore .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-thailand .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover,
+#container-countries .container-vietnam .content .content-language .container-language .language-breakdown .lb-content .row .cards .card:hover {
   z-index: 5;
-  transform: scale(1.1);
+  transform: scale(1.09);
 }
 
 #container-countries .container-brunei .content .content-infrastructure,
@@ -1788,6 +2090,7 @@ header nav #menu-burger .line {
   width: 70%;
   height: 40%;
   margin-bottom: 80px;
+  grid-template-rows: 10% 131%;
 }
 
 #container-countries .container-brunei .content .content-infrastructure .folder .folder-container-tabs,
@@ -2027,4 +2330,16 @@ body {
   transition: all 0.25s ease-in-out;
   transform: scale(1.3);
   opacity: 1;
+}
+
+#website-sources {
+  height: 7vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: #253680;
+  color: #f5f5f5;
+  font-family: "Roboto";
+  font-size: 0.8rem;
+  font-weight: 300;
 }

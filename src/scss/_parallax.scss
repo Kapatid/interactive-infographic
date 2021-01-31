@@ -3,7 +3,7 @@
 
 .parallax {
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   font-family: "Roboto", sans-serif;
 
   overflow-x: hidden;
@@ -16,7 +16,7 @@
   position: relative;
   height: 500px; /* fallback for older browsers */
   height: 100vh;
-  width: 100%;
+  width: 100vw;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }

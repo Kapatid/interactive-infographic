@@ -343,13 +343,13 @@ editOptions("RELIGION", "#253680", {
   },
 });
 makeChart("doughnut-chart-religion-laos", {
-  labels: ["N/A"],
+  labels: ["Buddhism", "Christianity", "Unspecified", "Others"],
   datasets: [
     {
       label: "Laos Religions",
-      data: [100],
-      backgroundColor: ["#253680"],
-      borderColor: ["#f9d552"],
+      data: [64.7, 1.7, 31.4, 2.1],
+      backgroundColor: ["#f5f5f5", "#253680", "#253680", "#253680"],
+      borderColor: ["#f9d552", "#f9d552", "#f9d552", "#f9d552"],
       borderWidth: 6,
       hoverBorderWidth: 2,
     },
@@ -451,12 +451,12 @@ editOptions("RELIGION", "#253680", {
   },
 });
 makeChart("doughnut-chart-religion-myanmar", {
-  labels: ["N/A"],
+  labels: ["na", "na"],
   datasets: [
     {
       label: "Myanmar Religions",
-      data: [100],
-      backgroundColor: ["#253680"],
+      data: [50, 50],
+      backgroundColor: ["#253680", "#f5f5f5"],
       borderColor: ["#f9d552"],
       borderWidth: 6,
       hoverBorderWidth: 2,

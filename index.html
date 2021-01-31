@@ -148,13 +148,13 @@
         <div class="parallax__layer parallax__layer--back" id="bg2"></div>
       </div>
 
-      <div id="group3" class="parallax__group">
-        <div class="parallax__layer parallax__layer--base">
-          <div id="map">
-            <h1 id="map-title">GET TO KNOW OUR CULTURE.</h1>
-            <div id="chartdiv"></div>
-          </div>
-        </div>
+      <div id="map">
+        <h1 id="map-title">GET TO KNOW OUR CULTURE.</h1>
+        <div id="chartdiv"></div>
+      </div>
+
+      <div id="website-sources">
+        <p id="sources">DOCUMENTATION:</p>
       </div>
     </div>
     <!-- </section> -->
@@ -518,31 +518,33 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-brunei"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-brunei"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Malay</div>
-                    <div class="card">English</div>
-                    <div class="card">Mandarin</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Malay</div>
+                      <div class="card">English</div>
+                      <div class="card">Mandarin</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Southern Varieties of Chinese</div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Southern Varieties of Chinese</div>
-                  </div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -1096,33 +1098,35 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-cambodia"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-cambodia"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Khmer</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Khmer</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>OTHER LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">English</div>
+                      <div class="card">French</div>
+                      <div class="card">Cham</div>
+                      <div class="card">Vietnamese</div>
+                      <div class="card">...</div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>OTHER LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">English</div>
-                    <div class="card">French</div>
-                    <div class="card">Cham</div>
-                    <div class="card">Vietnamese</div>
-                    <div class="card">...</div>
-                  </div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -1677,28 +1681,30 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-indonesia"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-indonesia"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Indonesian</div>
-                    <div class="card">Javanese (Jawa)</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Indonesian</div>
+                      <div class="card">Javanese (Jawa)</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards"></div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards"></div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -1917,8 +1923,40 @@
           <div class="content-famous-bldgs">
             <div class="buildings">
               <div class="container-building">
-                <div class="building-name">N/A</div>
-                <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+                <div class="building-name">Great Sacred Stupa</div>
+                <img
+                  src="./dist/img/famous-buildings/lao/Great Sacred Stupa.png"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Patuxai</div>
+                <img src="./dist/img/famous-buildings/lao/Patuxai.png" alt="" />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Wat Phu</div>
+                <img
+                  src="./dist/img/famous-buildings/lao/Wat Manorom.png"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Wat Phu</div>
+                <img src="./dist/img/famous-buildings/lao/Wat Phu.png" alt="" />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Wat Si Muang</div>
+                <img
+                  src="./dist/img/famous-buildings/lao/Wat Si Muang.png"
+                  alt=""
+                />
+              </div>
+              <div class="container-building">
+                <div class="building-name">Wat Xieng Thong</div>
+                <img
+                  src="./dist/img/famous-buildings/lao/Wat Xieng Thong.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -1926,12 +1964,38 @@
           <div class="content-arts folder">
             <div class="folder-container-tabs">
               <div class="folder-tab">
-                <div class="folder-tab-name">N/A</div>
+                <div class="folder-tab-name">Art Forms</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Regional and Rural Art Forms</div>
               </div>
             </div>
 
             <div class="folder-content">
-              <div class="folder-content-body">N/A</div>
+              <div class="folder-content-body">
+                Most art forms of Laos are heavily influenced by their religion
+                and their local traditional sources. These influences are very
+                evident in the subject of the carvings and sculptures found in
+                religious places. Similarly, dance dramas have gotten their
+                themes from ancient Indian epics, like the Ramayana, that
+                religious significance. These dramatic performances actually
+                have historically marked religious celebrations and important
+                holidays.
+              </div>
+              <div class="folder-content-body">
+                Laos has a wide assortment of regional and rural art forms, such
+                as weaving, wood and ivory carving, basketmaking, silverwork and
+                goldwork. There are musical instruments as well like the khene,
+                a wood and bamboo mouth organ that is used by different rural
+                people. More instruments include the various flutes, plucked and
+                bowed lutes, drums, and cymbals. The country is also rich in
+                regional vocal music traditions, most of them are designated by
+                some form of the term khap or lam. Performances of these vocal
+                music are often performed in a form of a passionate battle of
+                wit, knowledge, and artistry between the sexes. Most Laotian
+                music is not written down but is passed down through oral
+                tradition.
+              </div>
             </div>
           </div>
 
@@ -1949,8 +2013,52 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <h1>DAY<br />MONTH</h1>
-                    <p>EVENT</p>
+                    <h1>1<br />JAN</h1>
+                    <p>New Year's Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>8<br />MAR</h1>
+                    <p>International Women's Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>14-16<br />APR</h1>
+                    <p>Lao New Year</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>1<br />MAY</h1>
+                    <p>Labour Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>6<br />MAY</h1>
+                    <p>Visakhabousa Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>1<br />JUN</h1>
+                    <p>Children's Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>5<br />JUL</h1>
+                    <p>Boun Khao Phansa</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>20<br />JUL</h1>
+                    <p>Lao Women's Union Day</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>1<br />OCT</h1>
+                    <p>Boun Ok Phansa</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>3<br />OCT</h1>
+                    <p>Boat Racing Festival *</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>31<br />OCT</h1>
+                    <p>That Luang Festival</p>
+                  </li>
+                  <li class="splide__slide">
+                    <h1>2<br />DEc</h1>
+                    <p>National Day</p>
                   </li>
                 </ul>
               </div>
@@ -1962,8 +2070,36 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <span>FESTIVALNAME</span>
-                    <img src="./dist/img/no-image-placeholder-2.jpg" />
+                    <span>Boun Bung Fai (Rocket Festival)</span>
+                    <img
+                      src="./dist/img/festivals/lao/Boun Bung Fai (Rocket Festival).png"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Boun Khao Phansa</span>
+                    <img src="./dist/img/festivals/lao/Boun Khao Phansa.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Boun Ok Phansa</span>
+                    <img src="./dist/img/festivals/lao/Boun Ok Phansa.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Boun Pi Mai (Lao New Year)</span>
+                    <img
+                      src="./dist/img/festivals/lao/Boun Pi Mai (Lao New Year).png"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Boun That Lang</span>
+                    <img src="./dist/img/festivals/lao/Boun That Lang.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Hmong New Year</span>
+                    <img src="./dist/img/festivals/lao/Hmong New Year.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <span>Lao National Day</span>
+                    <img src="./dist/img/festivals/lao/Lao National Day.png" />
                   </li>
                 </ul>
               </div>
@@ -1982,7 +2118,29 @@
               <div class="splide__track">
                 <ul class="splide__list">
                   <li class="splide__slide">
-                    <img src="./dist/img/no-image-placeholder-2.jpg" />
+                    <img
+                      src="./dist/img/festivals/lao/Boun Bung Fai (Rocket Festival).png"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./dist/img/festivals/lao/Boun Khao Phansa.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./dist/img/festivals/lao/Boun Ok Phansa.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img
+                      src="./dist/img/festivals/lao/Boun Pi Mai (Lao New Year).png"
+                    />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./dist/img/festivals/lao/Boun That Lang.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./dist/img/festivals/lao/Hmong New Year.png" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="./dist/img/festivals/lao/Lao National Day.png" />
                   </li>
                 </ul>
               </div>
@@ -1991,46 +2149,89 @@
 
           <div class="content-superstition">
             <div class="container-superstitions">
-              <div class="superstition">CONTENT</div>
+              <div class="superstition">
+                If you cut your hair on a Wednesday or on your birthday it can
+                shorten your life.
+              </div>
+              <div class="superstition">
+                When your right eye twitches it is a sign of good luck, while
+                bad luck if your left eye twitches.
+              </div>
+              <div class="superstition">
+                If you do not cover the sticky rice basket when you finish
+                eating you may never find a partner.
+              </div>
+              <div class="superstition">
+                Whistling at night may attract ghosts.
+              </div>
+              <div class="superstition">
+                Homes, businesses and temples must have small spirit houses for
+                spirits to live in.
+              </div>
             </div>
           </div>
 
           <div class="content-commute folder">
             <div class="folder-container-tabs">
               <div class="folder-tab">
-                <div class="folder-tab-name">TABNAME</div>
+                <div class="folder-tab-name">Bicycle</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Tuk Tuk</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">Songthaew</div>
+              </div>
+              <div class="folder-tab">
+                <div class="folder-tab-name">VIP Night Buses</div>
               </div>
             </div>
 
             <div class="folder-content">
-              <div class="folder-content-body">CONTENT</div>
+              <div class="folder-content-body">
+                If you are exploring the cities like Luang Prabang, Vientiane or
+                Pakse, you rent a bicycle for 24 hours.
+              </div>
+              <div class="folder-content-body">
+                Usually cheaper than taxis, tuk tuks are auto rickshaws with
+                three wheels and are prevalent in cities in Laos.
+              </div>
+              <div class="folder-content-body">
+                Also known as Jumbos, they are very similar to Jeepneys from the
+                Philippines, but Songthaews are pick-up trucks. Like Jeepneys
+                they also follow a specific route.
+              </div>
+              <div class="folder-content-body">
+                These buses take you to another city while you sleep in the bus.
+                The beds in these buses are twin bunks, so 2 people share 1
+                bunk.
+              </div>
             </div>
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-laos"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-laos"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">LANGUAGE</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Laotian</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">LANGUAGE</div>
-                  </div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -2038,12 +2239,64 @@
             <div class="folder">
               <div class="folder-container-tabs">
                 <div class="folder-tab">
-                  <div class="folder-tab-name">TABNAME</div>
+                  <div class="folder-tab-name">Power infrastructure</div>
+                </div>
+                <div class="folder-tab">
+                  <div class="folder-tab-name">Hydropower</div>
+                </div>
+                <div class="folder-tab">
+                  <div class="folder-tab-name">Telecommunications</div>
+                </div>
+                <div class="folder-tab">
+                  <div class="folder-tab-name">Infrastructure in Laos</div>
                 </div>
               </div>
 
               <div class="folder-content">
-                <div class="folder-content-body">CONTENT</div>
+                <div class="folder-content-body">
+                  Power infrastructure in Laos is under development, according
+                  to the Department of Energy Business. Two-thirds of the
+                  population in Laos has access to electricity, and the power
+                  sector is working towards sustainability and energy
+                  efficiency. By promoting sustainable power, natural resources
+                  are preserved.
+                </div>
+                <div class="folder-content-body">
+                  The Lao government plans to establish hydropower as a source
+                  of energy for the country and export electricity to
+                  neighboring countries who are in need of electric power. The
+                  government hopes that by 2020, hydropower as an infrastructure
+                  in Laos will provide profits to combat poverty within the
+                  country.
+                </div>
+                <div class="folder-content-body">
+                  Telecommunications as an infrastructure in Laos is another
+                  necessity that needs to be addressed. The National Academic of
+                  Sciences and Engineering Medicine wrote of the importance of
+                  telecommunication as a foundation for social and economic
+                  development as well as a vital groundwork for national
+                  security. Telecommunication as an infrastructure in Laos is
+                  slowly gaining momentum. Laos has seen countless reforms and
+                  progress of telecommunications as an infrastructure to draw
+                  the attention of foreign investors. However, internet services
+                  have been slow, a concern that many Laotians see as a
+                  deterrent to social and economic development. Fortunately,
+                  progress is expected to continue to 2022.
+                </div>
+                <div class="folder-content-body">
+                  In 2017, infrastructure in Laos continued to improve. The
+                  Ministry of Finance and the World Bank signed a $25 million
+                  agreement to stabilize roads through maintenance. The Lao PDR
+                  Road Sector II Project is meant to improve road infrastructure
+                  for efficiency and safety. Once roads are stabilized around
+                  Laos, rural people will be able to find safety in regards to
+                  severe weather and will not have to travel on unsafe roads.
+                  Infrastructure in Laos is slowly making progress and providing
+                  efficient and maintained infrastructure to improve its
+                  citizens’ quality of life. These efforts will have an enormous
+                  effect on alleviating poverty and growing prosperity in the
+                  country.
+                </div>
               </div>
             </div>
           </div>
@@ -2434,28 +2687,30 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-malaysia"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-malaysia"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Malay</div>
-                    <div class="card">English</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Malay</div>
+                      <div class="card">English</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>OTHER LANGUAGES</h1>
+                    <div class="cards"></div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>OTHER LANGUAGES</h1>
-                  <div class="cards"></div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -2613,8 +2868,37 @@
           <div class="content-food">
             <div class="foods">
               <div class="container-food">
-                <div class="food-name">N/A</div>
-                <img src="./dist/img/no-image-placeholder-2.jpg" alt="" />
+                <div class="food-name">Buthi Kyaw</div>
+                <img src="./dist/img/foods/myanmar/Buthi Kyaw.png" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Mohinga</div>
+                <img src="./dist/img/foods/myanmar/Mohinga.png" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Nan gyi thoke</div>
+                <img src="./dist/img/foods/myanmar/Nan gyi thoke.png" alt="" />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Shan-style noodles</div>
+                <img
+                  src="./dist/img/foods/myanmar/Shan-style noodles.png"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Shan-Style Rice</div>
+                <img
+                  src="./dist/img/foods/myanmar/Shan-Style Rice.png"
+                  alt=""
+                />
+              </div>
+              <div class="container-food">
+                <div class="food-name">Shan-style ‘tofu’ noodles</div>
+                <img
+                  src="./dist/img/foods/myanmar/Shan-style ‘tofu’ noodles.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -2721,29 +3005,31 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-myanmar"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-myanmar"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">LANGUAGE</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">LANGUAGE</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">LANGUAGE</div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">LANGUAGE</div>
-                  </div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -3234,28 +3520,30 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-philippines"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-philippines"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Filipino</div>
-                    <div class="card">English</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Filipino</div>
+                      <div class="card">English</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards"></div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards"></div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -3861,35 +4149,37 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-singapore"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-singapore"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Mandarin</div>
-                    <div class="card">Malay</div>
-                    <div class="card">Tamil</div>
-                    <div class="card">English</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Mandarin</div>
+                      <div class="card">Malay</div>
+                      <div class="card">Tamil</div>
+                      <div class="card">English</div>
+                    </div>
                   </div>
-                </div>
 
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card" style="font-size: 0.8rem">
-                      Singlish (a variety of English spoken in Singapore,
-                      incorporating elements of Chinese and Malay)
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card" style="font-size: 0.8rem">
+                        Singlish (a variety of English spoken in Singapore,
+                        incorporating elements of Chinese and Malay)
+                      </div>
                     </div>
                   </div>
                 </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -4515,34 +4805,36 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-thailand"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-thailand"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Thai</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Thai</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card" style="font-size: 0.8rem">Burmese</div>
+                      <div class="card" style="font-size: 0.8rem">English</div>
+                      <div class="card" style="font-size: 0.8rem">Japanese</div>
+                      <div class="card" style="font-size: 0.8rem">Korean</div>
+                      <div class="card" style="font-size: 0.8rem">Hindi</div>
+                      <div class="card" style="font-size: 0.8rem">French</div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card" style="font-size: 0.8rem">Burmese</div>
-                    <div class="card" style="font-size: 0.8rem">English)</div>
-                    <div class="card" style="font-size: 0.8rem">Japanese</div>
-                    <div class="card" style="font-size: 0.8rem">Korean</div>
-                    <div class="card" style="font-size: 0.8rem">Hindi</div>
-                    <div class="card" style="font-size: 0.8rem">French</div>
-                  </div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -5034,34 +5326,36 @@
           </div>
 
           <div class="content-language">
-            <canvas
-              id="doughnut-chart-language-vietnam"
-              width="700"
-              height="500"
-            ></canvas>
+            <div class="container-language">
+              <canvas
+                id="doughnut-chart-language-vietnam"
+                width="700"
+                height="500"
+              ></canvas>
 
-            <div class="language-breakdown">
-              <div class="lb-content">
-                <div class="row">
-                  <h1>OFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card">Hanoi Vietnamese</div>
-                    <div class="card">Hue Vietnamese</div>
-                    <div class="card">Saigon Vietnamese</div>
+              <div class="language-breakdown">
+                <div class="lb-content">
+                  <div class="row">
+                    <h1>OFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card">Hanoi Vietnamese</div>
+                      <div class="card">Hue Vietnamese</div>
+                      <div class="card">Saigon Vietnamese</div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <h1>UNOFFICIAL LANGUAGES</h1>
+                    <div class="cards">
+                      <div class="card" style="font-size: 0.8rem">English</div>
+                      <div class="card" style="font-size: 0.8rem">French</div>
+                      <div class="card" style="font-size: 0.8rem">Chinese</div>
+                      <div class="card" style="font-size: 0.8rem">Khmer</div>
+                    </div>
                   </div>
                 </div>
-
-                <div class="row">
-                  <h1>UNOFFICIAL LANGUAGES</h1>
-                  <div class="cards">
-                    <div class="card" style="font-size: 0.8rem">English</div>
-                    <div class="card" style="font-size: 0.8rem">French</div>
-                    <div class="card" style="font-size: 0.8rem">Chinese</div>
-                    <div class="card" style="font-size: 0.8rem">Khmer</div>
-                  </div>
-                </div>
+                <div></div>
               </div>
-              <div></div>
             </div>
           </div>
 
@@ -5274,6 +5568,9 @@
       integrity="sha512-d9xgZrVZpmmQlfonhQUvTR7lMPtO7NkZMkA0ABN3PHCbKA5nqylQ/yWlFAyY6hYgdF1Qh6nYiuADWwKB4C2WSw=="
       crossorigin="anonymous"
     ></script>
+
+    <!-- Enter View -->
+    <script src="./vendor/enter-view-master/enter-view.min.js"></script>
 
     <!-- Custom -->
     <script src="./dist/js/carousel.js"></script>

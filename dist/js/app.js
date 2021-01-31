@@ -4,6 +4,7 @@ var white = "#F5F5F5";
 
 var countryBallsAnimated = false;
 var mapTitleAnimated = false;
+var sourcesAnimated = false;
 
 /* ----------- HOME PAGE EVENTS / ANIMATIONS ----------- */
 document
@@ -16,7 +17,7 @@ document
 document
   .getElementsByClassName("home-btn-2")[0]
   .addEventListener("click", function (event) {
-    document.querySelector("#group3").scrollIntoView({
+    document.querySelector("#map").scrollIntoView({
       behavior: "smooth",
     });
   });
@@ -51,15 +52,18 @@ anime({
   targets: "#map-title",
   opacity: 0,
 });
+anime({
+  targets: "#sources",
+  opacity: 0,
+});
 
 /* ----------- START ANIMATIONS ON SCROLL ----------- */
-document
-  .getElementsByClassName("parallax")[0]
-  .addEventListener("scroll", function () {
-    let currentScroll = document.getElementsByClassName("parallax")[0]
-      .scrollTop;
 
-    if (currentScroll >= 794 && countryBallsAnimated == false) {
+enterView({
+  selector: "#group2",
+  offset: 0.9,
+  enter: function (el) {
+    if (countryBallsAnimated == false) {
       anime({
         targets: ".country-balls1 img",
         opacity: [0, 1],
@@ -83,8 +87,14 @@ document
 
       countryBallsAnimated = true;
     }
+  },
+});
 
-    if (currentScroll >= 1588 && mapTitleAnimated == false) {
+enterView({
+  selector: "#map",
+  offset: 0.9,
+  enter: function (el) {
+    if (mapTitleAnimated == false) {
       anime({
         targets: "#map h1",
         opacity: [0, 1],
@@ -94,9 +104,23 @@ document
 
       mapTitleAnimated = true;
     }
+  },
+});
 
-    // console.log(document.getElementsByClassName("parallax")[0].scrollTop); // KNOW THE CURRENT SCROLL
-  });
+enterView({
+  selector: "#sources",
+  enter: function (el) {
+    if (sourcesAnimated == false) {
+      anime({
+        targets: "#sources",
+        opacity: [0, 1],
+        duration: 8000,
+      });
+
+      sourcesAnimated = true;
+    }
+  },
+});
 
 /* ----------- COUNTRY PAGE EVENTS / ANIMATIONS ----------- */
 var changePage = true;

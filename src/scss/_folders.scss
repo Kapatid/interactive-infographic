@@ -1,6 +1,12 @@
 .folder {
+  width: 100vw;
+  height: 100vh;
+
+  grid-template-rows: 20% 80%;
+
   .folder-container-tabs {
     width: 80%;
+    height: 100%;
     overflow: auto;
 
     display: grid;
@@ -41,7 +47,8 @@
 
   .folder-content {
     width: 80%;
-    height: 400px;
+    height: 100%;
+    margin-bottom: 40px;
     background-color: $white;
 
     display: grid;
@@ -55,6 +62,20 @@
 
       display: none;
       place-items: center;
+
+      &::-webkit-scrollbar {
+        width: 6px;
+        height: 9px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #364cb1;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: #283a8a;
+      }
+      &::-webkit-scrollbar-track {
+        background: rgba(0, 0, 0, 0.089);
+      }
 
       &:first-of-type {
         display: grid;
